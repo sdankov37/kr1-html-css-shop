@@ -80,3 +80,16 @@ orderForm.addEventListener('submit', (event) => {
   // Закрываем модальное окно
   orderDialog.close();
 });
+
+// ============================================================
+// Кнопка возврата наверх
+// ============================================================
+document.querySelectorAll('.scroll-top').forEach((link) => {
+  link.addEventListener('click', (event) => {
+    // Отменяем переход по href="#"
+    event.preventDefault();
+
+    // Плавно прокручиваем страницу наверх
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+});

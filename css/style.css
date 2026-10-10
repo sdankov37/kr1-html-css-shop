@@ -3,14 +3,14 @@
    =============================================================== */
 :root {
   /* Основные цвета проекта */
-  --color-bg: #ffffff;
+  --color-bg: #fffff6e0;
   --color-text: #222222;
   --color-muted: #666666;
-  --color-primary: #00ec00;
-  --color-primary-dark: #0cbe06;
-  --color-border: #dddddd;
-  --color-surface: #f7f7f7;
-  --color-surface-accent: #eef5ff;
+  --color-primary: #31a72d;
+  --color-primary-dark: #1b5e19;
+  --color-border: #ffd67c;
+  --color-surface: #d1db98;
+  --color-surface-accent: #f3ffb2;
   --color-danger: #b00020;
   --color-success: #168a2f;
   --color-success-bg: #eefaf0;
@@ -410,4 +410,46 @@ html {
   border: 1px solid var(--color-border);
   border-radius: var(--radius-sm);
   font: inherit;
+}
+
+/* ===============================================================
+   8. Фиксированная шапка и кнопка «Наверх»
+   =============================================================== */
+
+/* Шапка прилипает к верхней части окна при прокрутке */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--color-surface);
+}
+
+/* Кнопка возврата наверх: фиксирована в правом нижнем углу */
+.scroll-top {
+  position: fixed;
+  right: var(--space-lg);
+  bottom: var(--space-lg);
+  z-index: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  text-decoration: none;
+  font-size: 20px;
+  line-height: 1;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.scroll-top:hover {
+  background-color: var(--color-primary-dark);
+  color: var(--color-white);
+}
+
+.scroll-top:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
 }
