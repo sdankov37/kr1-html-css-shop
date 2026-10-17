@@ -1,6 +1,6 @@
-/* ===============================================================
+/*
    1. Переменные проекта (зелёная схема)
-   =============================================================== */
+*/
 :root {
   --color-bg: #fffff6e0;
   --color-text: #222222;
@@ -28,9 +28,9 @@
   --container-width: 1100px;
 }
 
-/* ===============================================================
+/* 
    2. Базовые стили
-   =============================================================== */
+*/
 * { box-sizing: border-box; }
 
 body {
@@ -48,14 +48,14 @@ main { padding: var(--space-lg); }
   outline-offset: 4px;
 }
 
-/* ===============================================================
+/* 
    3. Общие элементы интерфейса
-   =============================================================== */
+*/
 a { color: var(--color-primary); }
 a:hover { color: var(--color-primary-dark); }
 a:focus-visible { outline: 2px solid var(--color-primary); outline-offset: 3px; }
 
-/* --- Блок кнопки --- */
+/*Блок кнопки*/
 .button {
   display: inline-block;
   padding: var(--space-sm) var(--space-md);
@@ -90,11 +90,11 @@ a:focus-visible { outline: 2px solid var(--color-primary); outline-offset: 3px; 
   background-color: var(--color-primary);
 }
 
-/* ===============================================================
+/* 
    4. Компоненты страницы
-   =============================================================== */
+*/
 
-/* --- Шапка --- */
+/*Шапка*/
 .site-header {
   position: sticky;
   top: 0;
@@ -121,7 +121,7 @@ a:focus-visible { outline: 2px solid var(--color-primary); outline-offset: 3px; 
 }
 .site-header__logo:hover { color: var(--color-primary); }
 
-/* --- Навигация --- */
+/*Навигация*/
 .site-nav__list {
   display: flex;
   flex-wrap: wrap;
@@ -153,7 +153,7 @@ a:focus-visible { outline: 2px solid var(--color-primary); outline-offset: 3px; 
   background-color: var(--color-primary);
 }
 
-/* --- Хлебные крошки --- */
+/*Хлебные крошки*/
 .breadcrumbs {
   max-width: var(--container-width);
   margin: 0 auto var(--space-md);
@@ -165,7 +165,7 @@ a:focus-visible { outline: 2px solid var(--color-primary); outline-offset: 3px; 
 .breadcrumbs__link:hover { color: var(--color-primary-dark); }
 .breadcrumbs__current::before { content: " / "; color: var(--color-muted); }
 
-/* --- Hero --- */
+/*Hero*/
 .hero {
   max-width: var(--container-width);
   margin: 0 auto var(--space-xl);
@@ -176,7 +176,7 @@ a:focus-visible { outline: 2px solid var(--color-primary); outline-offset: 3px; 
 .hero__title { margin-top: 0; }
 .hero__text { max-width: 720px; }
 
-/* --- Секции --- */
+/*Секции*/
 .section {
   max-width: var(--container-width);
   margin: 0 auto var(--space-xl);
@@ -186,14 +186,14 @@ a:focus-visible { outline: 2px solid var(--color-primary); outline-offset: 3px; 
 .advantages-list { padding-left: var(--space-lg); }
 .advantages-list__item { margin-bottom: var(--space-xs); }
 
-/* --- Сетка товаров --- */
+/*Сетка товаров*/
 .products-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: var(--space-lg);
 }
 
-/* --- Карточка товара --- */
+/*Карточка товара*/
 .product-card {
   position: relative;
   display: flex;
@@ -228,7 +228,7 @@ a:focus-visible { outline: 2px solid var(--color-primary); outline-offset: 3px; 
 .product-card--discount .product-card__price { color: var(--color-danger); }
 .product-card__button { margin-top: auto; align-self: flex-start; }
 
-/* --- Раскладка каталога --- */
+/*Раскладка каталога*/
 .catalog-layout {
   max-width: var(--container-width);
   margin: 0 auto var(--space-xl);
@@ -252,7 +252,7 @@ a:focus-visible { outline: 2px solid var(--color-primary); outline-offset: 3px; 
 
 .catalog-products { grid-area: products; }
 
-/* --- Форма фильтров --- */
+/*Форма фильтров*/
 .filters-form { display: grid; gap: var(--space-md); }
 .filters-form__group {
   margin: 0;
@@ -270,7 +270,7 @@ a:focus-visible { outline: 2px solid var(--color-primary); outline-offset: 3px; 
   font: inherit;
 }
 
-/* --- Карточка товара (страница) --- */
+/*Карточка товара (страница)*/
 .product-layout {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -319,7 +319,7 @@ a:focus-visible { outline: 2px solid var(--color-primary); outline-offset: 3px; 
 .product-aside__title { margin-top: 0; font-size: 16px; }
 .product-aside__list { padding-left: var(--space-md); margin: 0; font-size: 14px; }
 
-/* --- Таблица --- */
+/*Таблица*/
 .spec-table {
   width: 100%;
   border-collapse: collapse;
@@ -346,7 +346,7 @@ a:focus-visible { outline: 2px solid var(--color-primary); outline-offset: 3px; 
 .spec-table__body tr:last-child td { border-bottom: none; }
 .spec-table__body tr:hover { background-color: var(--color-surface-accent); }
 
-/* --- Дополнительные блоки --- */
+/*Дополнительные блоки*/
 .aside-info {
   max-width: var(--container-width);
   margin: 0 auto var(--space-xl);
@@ -359,7 +359,7 @@ a:focus-visible { outline: 2px solid var(--color-primary); outline-offset: 3px; 
 .contacts-list { padding-left: var(--space-lg); }
 .contacts-list__item { margin-bottom: var(--space-xs); }
 
-/* --- Подвал --- */
+/*Подвал*/
 .site-footer {
   background-color: var(--color-surface);
   border-top: 1px solid var(--color-border);
@@ -367,7 +367,7 @@ a:focus-visible { outline: 2px solid var(--color-primary); outline-offset: 3px; 
 }
 .site-footer__inner { max-width: var(--container-width); margin: 0 auto; }
 
-/* --- Кнопка «Наверх» --- */
+/*Кнопка «Наверх»*/
 .scroll-top {
   position: fixed;
   right: var(--space-lg);
@@ -386,9 +386,9 @@ a:focus-visible { outline: 2px solid var(--color-primary); outline-offset: 3px; 
 }
 .scroll-top:hover { background-color: var(--color-primary-dark); color: var(--color-white); }
 
-/* ===============================================================
+/* 
    5. Форма и модальное окно
-   =============================================================== */
+*/
 .order-dialog {
   width: min(100% - 32px, 560px);
   padding: var(--space-lg);
@@ -429,4 +429,34 @@ a:focus-visible { outline: 2px solid var(--color-primary); outline-offset: 3px; 
   padding: var(--space-md);
   border-left: 4px solid var(--color-success);
   background-color: var(--color-success-bg);
+}
+
+/*
+   6. Анимации
+*/
+
+/*Появление карточек при загрузке*/
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.product-card {
+  animation: fade-in-up 0.5s ease-out backwards;
+  transition: transform 0.25s ease,
+              box-shadow 0.25s ease,
+              border-color 0.25s ease;
+}
+
+.product-card:nth-child(1) { animation-delay: 0.05s; }
+.product-card:nth-child(2) { animation-delay: 0.10s; }
+.product-card:nth-child(3) { animation-delay: 0.15s; }
+.product-card:nth-child(4) { animation-delay: 0.20s; }
+.product-card:nth-child(5) { animation-delay: 0.25s; }
+.product-card:nth-child(6) { animation-delay: 0.30s; }
+
+.product-card:hover {
+  border-color: var(--color-primary);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(49, 167, 45, 0.15);
 }
