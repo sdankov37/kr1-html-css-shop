@@ -3,13 +3,14 @@
 // ============================================================
 
 const orderDialog = document.getElementById('order-dialog');
-const orderButtons = document.querySelectorAll('.product-card__button');
+const orderButtons = document.querySelectorAll('[data-product]');
 const closeDialogButton = document.getElementById('close-order-dialog');
 const selectedProductInput = document.getElementById('selected-product');
 
 if (orderDialog && closeDialogButton) {
   orderButtons.forEach((button) => {
-    button.addEventListener('click', () => {
+    button.addEventListener('click', (event) => {
+      event.preventDefault();
       const productName = button.dataset.product;
       if (selectedProductInput && productName) {
         selectedProductInput.value = productName;
