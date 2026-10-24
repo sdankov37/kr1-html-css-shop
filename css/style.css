@@ -460,3 +460,122 @@ a:focus-visible { outline: 2px solid var(--color-primary); outline-offset: 3px; 
   transform: translateY(-4px);
   box-shadow: 0 8px 20px rgba(49, 167, 45, 0.15);
 }
+
+/*
+   7. Новые элементы для КР (Отзывы, FAQ, Картинки)
+*/
+
+/* --- Изображения в карточках товаров --- */
+.product-card__image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  margin-bottom: var(--space-sm);
+  display: block;
+}
+
+/* --- Галерея на странице товара --- */
+.product-gallery__main {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  margin-bottom: var(--space-sm);
+  display: block;
+}
+
+.product-gallery__thumb {
+  width: 80px;
+  height: 60px;
+  object-fit: cover;
+  cursor: pointer;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  transition: border-color 0.2s;
+}
+
+.product-gallery__thumb:hover {
+  border-color: var(--color-primary);
+}
+
+/* --- Блок FAQ (на основе details/summary) --- */
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  max-width: 800px;
+}
+
+.faq-item {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+}
+
+.faq-item__question {
+  font-weight: 700;
+  cursor: pointer;
+  color: var(--color-text);
+  list-style: none; /* Убирает стандартный треугольник в некоторых браузерах */
+}
+
+.faq-item__question::before {
+  content: "▶ ";
+  color: var(--color-primary);
+  font-size: 0.8em;
+  transition: transform 0.2s;
+  display: inline-block;
+}
+
+.faq-item[open] .faq-item__question::before {
+  transform: rotate(90deg);
+}
+
+.faq-item__answer {
+  margin-top: var(--space-sm);
+  margin-bottom: 0;
+  color: var(--color-muted);
+  padding-left: var(--space-lg);
+}
+
+/* --- Блок Отзывов --- */
+.reviews-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--space-md);
+}
+
+.review {
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+}
+
+.review__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-sm);
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: var(--space-xs);
+}
+
+.review__author {
+  font-weight: 700;
+  color: var(--color-primary-dark);
+}
+
+.review__rating {
+  color: #f39c12; /* Жёлтый цвет для звёзд */
+  font-size: 14px;
+}
+
+.review__text {
+  margin: 0;
+  color: var(--color-text);
+  font-size: 14px;
+  line-height: 1.6;
+}

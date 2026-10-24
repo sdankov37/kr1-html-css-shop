@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Категория Электроника - ShopProject.">
+  <title>Электроника — ShopProject</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="site-header__logo" href="index.html">ShopProject</a>
+      <nav class="site-nav" aria-label="Основная навигация">
+        <ul class="site-nav__list">
+          <li class="site-nav__item"><a class="site-nav__link" href="index.html">Главная</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="catalog.html">Каталог</a></li>
+          <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="category.html">Категория</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="product.html">Товар</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="order.html">Заявка</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="contacts.html">Контакты</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <nav class="breadcrumbs" aria-label="Хлебные крошки">
+      <a class="breadcrumbs__link" href="index.html">Главная</a>
+      <a class="breadcrumbs__link" href="catalog.html">Каталог</a>
+      <span class="breadcrumbs__current">Лошади</span>
+    </nav>
+
+    <section class="section">
+      <h1 class="section__title">Категория: Лошади</h1>
+      <p>В этой категории собраны все лошади учебного магазина.</p>
+    </section>
+
+    <section class="catalog-layout">
+      <aside class="catalog-filters">
+        <h2 class="catalog-filters__title">Фильтры</h2>
+        <p>Фильтры для категории "Лошади"</p>
+      </aside>
+
+      <section class="catalog-products">
+        <div class="products-grid">
+          <article class="product-card">
+            <img src="images/product-1.jpg" alt="Лошадь 1" class="product-card__image">
+            <h3 class="product-card__title">Лошади 1</h3>
+            <p class="product-card__description">Описание лошади.</p>
+            <p class="product-card__price">1000 ₽</p>
+            <a class="button button--primary product-card__button" href="product.html">Подробнее</a>
+          </article>
+          <article class="product-card">
+            <img src="images/product-2.jpg" alt="Электроника 2" class="product-card__image">
+            <h3 class="product-card__title">Электроника 2</h3>
+            <p class="product-card__description">Описание лошади.</p>
+            <p class="product-card__price">1500 ₽</p>
+            <a class="button button--primary product-card__button" href="product.html">Подробнее</a>
+          </article>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <p>&copy; 2026 ShopProject. Учебный проект.</p>
+      <p>Дисциплина: Фронтенд и бэкенд разработка</p>
+    </div>
+  </footer>
+
+  <a class="scroll-top" href="#" aria-label="Наверх">↑</a>
+</body>
+</html>
