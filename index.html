@@ -16,6 +16,7 @@
         <ul class="site-nav__list">
           <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="index.html">Главная</a></li>
           <li class="site-nav__item"><a class="site-nav__link" href="catalog.html">Каталог</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="category.html">Категория</a></li>
           <li class="site-nav__item"><a class="site-nav__link" href="product.html">Товар</a></li>
           <li class="site-nav__item"><a class="site-nav__link" href="order.html">Заявка</a></li>
           <li class="site-nav__item"><a class="site-nav__link" href="contacts.html">Контакты</a></li>
@@ -60,6 +61,7 @@
       <div class="products-grid">
         <article class="product-card product-card--featured">
           <span class="product-card__badge">Хит</span>
+          <img src="images\product-1.jpeg" alt="Товар 1" class="product-card__image">
           <h3 class="product-card__title">Товар 1</h3>
           <p class="product-card__description">Краткое описание учебного товара.</p>
           <p class="product-card__price">1000 ₽</p>
@@ -67,6 +69,7 @@
         </article>
 
         <article class="product-card">
+          <img src="images\product-2.jpeg" alt="Товар 2" class="product-card__image">
           <h3 class="product-card__title">Товар 2</h3>
           <p class="product-card__description">Краткое описание учебного товара.</p>
           <p class="product-card__price">1500 ₽</p>
@@ -75,11 +78,31 @@
 
         <article class="product-card product-card--discount">
           <span class="product-card__badge">Скидка</span>
+          <img src="images\product-3.jpeg" alt="Товар 3" class="product-card__image">
           <h3 class="product-card__title">Товар 3</h3>
           <p class="product-card__description">Краткое описание учебного товара.</p>
           <p class="product-card__price">2000 ₽</p>
           <a class="button button--primary product-card__button" href="product.html">Подробнее</a>
         </article>
+      </div>
+    </section>
+
+    <!-- Новый блок: FAQ -->
+    <section class="section" id="faq">
+      <h2 class="section__title">Часто задаваемые вопросы</h2>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary class="faq-item__question">Как оформить заказ?</summary>
+          <p class="faq-item__answer">Выберите товар в каталоге, нажмите кнопку «Заказать» и заполните форму. Наш менеджер свяжется с вами.</p>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-item__question">Какие способы оплаты вы принимаете?</summary>
+          <p class="faq-item__answer">Мы принимаем наличные, банковские карты и переводы по счёту.</p>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-item__question">Сколько идёт доставка?</summary>
+          <p class="faq-item__answer">По Москве — 1 день, по России — от 3 до 7 дней в зависимости от региона.</p>
+        </details>
       </div>
     </section>
 
