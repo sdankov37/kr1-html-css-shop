@@ -6,6 +6,8 @@
   <meta name="description" content="Перекрёсток — учебный интернет-магазин продуктов: свежие товары, каталог и оформление заявки.">
   <title>Перекрёсток — учебный интернет-магазин</title>
   <link rel="stylesheet" href="css/style.css">
+  <!-- Порядок важен: сначала данные, потом логика -->
+  <script src="js/data.js" defer></script>
   <script src="js/main.js" defer></script>
 </head>
 <body>
@@ -30,7 +32,7 @@
     <section class="hero">
       <div class="hero__content">
         <h1 class="hero__title">Свежие продукты каждый день</h1>
-        <p class="hero__text">Учебный интернет-магазин сети «Перекрёсток». Адаптивная вёрстка, доступность и подготовка к подключению JavaScript.</p>
+        <p class="hero__text">Учебный интернет-магазин сети «Перекрёсток». Адаптивная вёрстка, доступность и первые шаги JavaScript.</p>
         <a class="button button--primary" href="catalog.html">Перейти в каталог</a>
       </div>
       <div class="hero__media">
@@ -46,23 +48,21 @@
       </div>
     </section>
 
+    <!-- Блок для безопасного вывода из JS: textContent, не innerHTML -->
+    <p class="js-message" aria-live="polite"></p>
+
     <section class="section">
       <h2 class="section__title">О магазине</h2>
-      <p>«Перекрёсток» — учебный проект интернет-магазина продуктов. В проекте реализованы адаптивная вёрстка, семантическая разметка и подготовка к подключению JavaScript. На следующих занятиях появятся интерактивность, работа с DOM и валидация форм.</p>
+      <p>«Перекрёсток» — учебный проект интернет-магазина продуктов. В проекте реализованы адаптивная вёрстка, семантическая разметка и первые шаги JavaScript: объект товара, функции форматирования цены и расчёта скидки, безопасный вывод данных на страницу.</p>
     </section>
 
     <section class="section">
       <h2 class="section__title">Популярные товары</h2>
       <div class="products-grid">
         <article class="product-card">
-          <img
-            class="product-card__image"
-            src="images/milk.jpg"
-            srcset="images/milk.jpg 800w"
-            sizes="(min-width: 900px) 380px, (min-width: 600px) 50vw, 100vw"
-            alt="Бутылка молока «Простоквашино» 3,2%"
-            width="400" height="300"
-            loading="lazy" decoding="async">
+          <img class="product-card__image" src="images/milk.jpg" srcset="images/milk.jpg 800w"
+               sizes="(min-width: 900px) 380px, (min-width: 600px) 50vw, 100vw"
+               alt="Бутылка молока «Простоквашино» 3,2%" width="400" height="300" loading="lazy" decoding="async">
           <h3 class="product-card__title">Молоко «Простоквашино»</h3>
           <p class="product-card__description">3,2%, 1 л</p>
           <p class="product-card__price">89 ₽</p>
@@ -70,14 +70,9 @@
         </article>
 
         <article class="product-card">
-          <img
-            class="product-card__image"
-            src="images/bread.png"
-            srcset="images/bread.png 800w"
-            sizes="(min-width: 900px) 380px, (min-width: 600px) 50vw, 100vw"
-            alt="Буханка хлеба «Бородинский»"
-            width="400" height="300"
-            loading="lazy" decoding="async">
+          <img class="product-card__image" src="images/bread.png" srcset="images/bread.png 800w"
+               sizes="(min-width: 900px) 380px, (min-width: 600px) 50vw, 100vw"
+               alt="Буханка хлеба «Бородинский»" width="400" height="300" loading="lazy" decoding="async">
           <h3 class="product-card__title">Хлеб «Бородинский»</h3>
           <p class="product-card__description">400 г, нарезной</p>
           <p class="product-card__price">55 ₽</p>
@@ -86,14 +81,9 @@
 
         <article class="product-card">
           <span class="product-card__badge">Скидка</span>
-          <img
-            class="product-card__image"
-            src="images/apples.jpg"
-            srcset="images/apples.jpg 800w"
-            sizes="(min-width: 900px) 380px, (min-width: 600px) 50vw, 100vw"
-            alt="Два яблока сорта «Гренни Смит»"
-            width="400" height="300"
-            loading="lazy" decoding="async">
+          <img class="product-card__image" src="images/apples.jpg" srcset="images/apples.jpg 800w"
+               sizes="(min-width: 900px) 380px, (min-width: 600px) 50vw, 100vw"
+               alt="Два яблока сорта «Гренни Смит»" width="400" height="300" loading="lazy" decoding="async">
           <h3 class="product-card__title">Яблоки «Гренни Смит»</h3>
           <p class="product-card__description">1 кг</p>
           <p class="product-card__price">149 ₽ <span class="product-card__price--old">189 ₽</span></p>
