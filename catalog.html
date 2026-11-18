@@ -3,180 +3,177 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Каталог товаров учебного интернет-магазина «Перекрёсток».">
   <title>Каталог — Перекрёсток</title>
-  <link rel="icon" href="images/perek_logo.jpeg">
+  <link rel="icon" type="image/jpeg" href="images/perek_logo.jpeg">
   <link rel="stylesheet" href="css/style.css">
-  <script src="js/data.js" defer></script>
-  <script src="js/main.js" defer></script>
 </head>
-<body>
-  <a class="skip-link" href="#main">Перейти к содержимому</a>
+<body id="top">
+  <a href="#main" class="skip-link">Перейти к содержимому</a>
 
-<header class="site-header">
-  <div class="site-header__inner">
-    <a href="index.html" class="site-header__logo">
-      <img src="images/perek_logo.jpeg" alt="Логотип Перекрёсток" class="logo-img" width="32" height="32">
-      <span>Перекрёсток</span>
-    </a>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a href="index.html" class="site-header__logo">
+        <img src="images/perek_logo.jpeg" alt="Логотип Перекрёсток" class="logo-img" width="36" height="36">
+        <span>Перекрёсток</span>
+      </a>
 
-    <nav class="site-nav" aria-label="Основная навигация">
-      <ul class="site-nav__list">
-        <li><a href="index.html" class="site-nav__link site-nav__link--active">Главная</a></li>
-        <li><a href="catalog.html" class="site-nav__link">Каталог</a></li>
-        <li><a href="index.html#about" class="site-nav__link">О магазине</a></li>
-        <li><a href="contacts.html" class="site-nav__link">Контакты</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
+      <nav class="site-nav" aria-label="Основная навигация">
+        <ul class="site-nav__list">
+          <li><a href="index.html" class="site-nav__link">Главная</a></li>
+          <li><a href="catalog.html" class="site-nav__link site-nav__link--active">Каталог</a></li>
+          <li><a href="about.html" class="site-nav__link">О магазине</a></li>
+          <li><a href="contacts.html" class="site-nav__link">Контакты</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
   <main id="main">
     <nav class="breadcrumbs" aria-label="Хлебные крошки">
-      <a class="breadcrumbs__link" href="index.html">Главная</a>
-      <span class="breadcrumbs__current" aria-current="page">Каталог</span>
+      <a href="index.html" class="breadcrumbs__link">Главная</a>
+      <span class="breadcrumbs__current">Каталог</span>
     </nav>
 
     <section class="section">
       <h1 class="section__title">Каталог товаров</h1>
-      <p>Выберите категорию и диапазон цены — сетка товаров адаптируется под ширину экрана.</p>
+      <p class="hero__text">Выберите категорию и диапазон цены — сетка товаров адаптируется под ширину экрана.</p>
     </section>
 
-    <p class="js-message" aria-live="polite"></p>
-
     <div class="catalog-layout">
-      <aside class="catalog-filters">
-        <h2 class="section__title">Фильтры</h2>
-        <form class="filters-form" action="#" method="get">
+      <!-- Боковая панель фильтров -->
+      <aside class="catalog-filters" aria-label="Фильтры каталога">
+        <h2 class="visually-hidden">Фильтры</h2>
+        <form class="filters-form" id="catalog-filters-form">
           <fieldset class="filters-form__group">
             <legend class="filters-form__legend">Категория</legend>
-            <label class="filters-form__check"><input type="checkbox" name="category" value="dairy" checked> Молочное</label>
-            <label class="filters-form__check"><input type="checkbox" name="category" value="bakery"> Хлеб</label>
-            <label class="filters-form__check"><input type="checkbox" name="category" value="fruits"> Фрукты</label>
-            <label class="filters-form__check"><input type="checkbox" name="category" value="drinks"> Напитки</label>
-            <label class="filters-form__check"><input type="checkbox" name="category" value="sweets"> Сладости</label>
+            <label class="filters-form__check">
+              <input type="checkbox" name="category" value="dairy" checked>
+              <span>Молочное</span>
+            </label>
+            <label class="filters-form__check">
+              <input type="checkbox" name="category" value="bakery" checked>
+              <span>Хлеб</span>
+            </label>
+            <label class="filters-form__check">
+              <input type="checkbox" name="category" value="fruits" checked>
+              <span>Фрукты</span>
+            </label>
+            <label class="filters-form__check">
+              <input type="checkbox" name="category" value="drinks" checked>
+              <span>Напитки</span>
+            </label>
+            <label class="filters-form__check">
+              <input type="checkbox" name="category" value="sweets" checked>
+              <span>Сладости</span>
+            </label>
           </fieldset>
 
           <fieldset class="filters-form__group">
             <legend class="filters-form__legend">Цена, ₽</legend>
             <div class="filters-form__row">
               <div>
-                <label class="filters-form__text-label" for="price-from">От</label>
-                <input class="filters-form__input" id="price-from" name="price-from" type="number" min="0" placeholder="0">
+                <label for="price-min" class="filters-form__text-label">От</label>
+                <input type="number" id="price-min" name="price-min" class="filters-form__input" min="0" placeholder="0">
               </div>
               <div>
-                <label class="filters-form__text-label" for="price-to">До</label>
-                <input class="filters-form__input" id="price-to" name="price-to" type="number" min="0" placeholder="1000">
+                <label for="price-max" class="filters-form__text-label">До</label>
+                <input type="number" id="price-max" name="price-max" class="filters-form__input" min="0" placeholder="1000">
               </div>
             </div>
           </fieldset>
 
-          <button class="button button--primary button--block" type="submit">Применить</button>
+          <button type="submit" class="button button--primary button--block">Применить</button>
         </form>
       </aside>
 
-      <section class="catalog-products" aria-label="Список товаров">
-        <div class="products-grid">
-          <article class="product-card">
-            <img class="product-card__image" src="images/milk.jpg" srcset="images/milk.jpg 800w"
-                 sizes="(min-width: 900px) 380px, (min-width: 600px) 50vw, 100vw"
-                 alt="Бутылка молока «Простоквашино» 3,2%" width="400" height="300" loading="lazy" decoding="async">
-            <h3 class="product-card__title">Молоко «Простоквашино»</h3>
-            <p class="product-card__description">3,2%, 1 л</p>
-            <p class="product-card__price">89 ₽</p>
-            <a class="button button--primary product-card__button" href="product.html" aria-label="Подробнее о товаре Молоко «Простоквашино»">Подробнее</a>
-          </article>
+      <!-- Сетка товаров -->
+      <div class="products-grid" id="catalog-grid">
+        <article class="product-card" data-category="dairy" data-price="89">
+          <img src="images/milk.jpg" alt="Бутылка молока «Простоквашино» 3,2%" class="product-card__image" width="400" height="300">
+          <h3 class="product-card__title">Молоко «Простоквашино»</h3>
+          <p class="product-card__description">3,2%, 1 л</p>
+          <p class="product-card__price">89 ₽</p>
+          <a href="product-milk.html" class="button button--secondary product-card__button">Подробнее</a>
+        </article>
 
-          <article class="product-card">
-            <img class="product-card__image" src="images/bread.png" srcset="images/bread.png 800w"
-                 sizes="(min-width: 900px) 380px, (min-width: 600px) 50vw, 100vw"
-                 alt="Буханка хлеба «Бородинский»" width="400" height="300" loading="lazy" decoding="async">
-            <h3 class="product-card__title">Хлеб «Бородинский»</h3>
-            <p class="product-card__description">400 г, нарезной</p>
-            <p class="product-card__price">55 ₽</p>
-            <a class="button button--primary product-card__button" href="product.html" aria-label="Подробнее о товаре Хлеб «Бородинский»">Подробнее</a>
-          </article>
+        <article class="product-card" data-category="bakery" data-price="55">
+          <img src="images/bread.png" alt="Буханка хлеба «Бородинский»" class="product-card__image" width="400" height="300">
+          <h3 class="product-card__title">Хлеб «Бородинский»</h3>
+          <p class="product-card__description">400 г, нарезной</p>
+          <p class="product-card__price">55 ₽</p>
+          <a href="product-bread.html" class="button button--secondary product-card__button">Подробнее</a>
+        </article>
 
-          <article class="product-card">
-            <span class="product-card__badge">Скидка</span>
-            <img class="product-card__image" src="images/apples.jpg" srcset="images/apples.jpg 800w"
-                 sizes="(min-width: 900px) 380px, (min-width: 600px) 50vw, 100vw"
-                 alt="Два яблока сорта «Гренни Смит»" width="400" height="300" loading="lazy" decoding="async">
-            <h3 class="product-card__title">Яблоки «Гренни Смит»</h3>
-            <p class="product-card__description">1 кг</p>
-            <p class="product-card__price">149 ₽ <span class="product-card__price--old">189 ₽</span></p>
-            <a class="button button--primary product-card__button" href="product.html" aria-label="Подробнее о товаре Яблоки «Гренни Смит»">Подробнее</a>
-          </article>
+        <article class="product-card" data-category="fruits" data-price="149">
+          <span class="product-card__badge">Скидка</span>
+          <img src="images/apples.jpg" alt="Два яблока сорта «Гренни Смит»" class="product-card__image" width="400" height="300">
+          <h3 class="product-card__title">Яблоки «Гренни Смит»</h3>
+          <p class="product-card__description">1 кг</p>
+          <p class="product-card__price">149 ₽ <span class="product-card__price--old">189 ₽</span></p>
+          <a href="product-apples.html" class="button button--secondary product-card__button">Подробнее</a>
+        </article>
 
-          <article class="product-card">
-            <img class="product-card__image" src="images/cheese.jpg" srcset="images/cheese.jpg 800w"
-                 sizes="(min-width: 900px) 380px, (min-width: 600px) 50vw, 100vw"
-                 alt="Кусок сыра «Российский»" width="400" height="300" loading="lazy" decoding="async">
-            <h3 class="product-card__title">Сыр «Российский»</h3>
-            <p class="product-card__description">45%, 200 г</p>
-            <p class="product-card__price">399 ₽</p>
-            <a class="button button--primary product-card__button" href="product.html" aria-label="Подробнее о товаре Сыр «Российский»">Подробнее</a>
-          </article>
+        <article class="product-card" data-category="dairy" data-price="399">
+          <img src="images/cheese.jpg" alt="Кусок сыра «Российский»" class="product-card__image" width="400" height="300">
+          <h3 class="product-card__title">Сыр «Российский»</h3>
+          <p class="product-card__description">45%, 200 г</p>
+          <p class="product-card__price">399 ₽</p>
+          <a href="product-cheese.html" class="button button--secondary product-card__button">Подробнее</a>
+        </article>
 
-          <article class="product-card">
-            <img class="product-card__image" src="images/coffee.jpg" srcset="images/coffee.jpg 800w"
-                 sizes="(min-width: 900px) 380px, (min-width: 600px) 50vw, 100vw"
-                 alt="Банка растворимого кофе «Jacobs Monarch»" width="400" height="300" loading="lazy" decoding="async">
-            <h3 class="product-card__title">Кофе «Jacobs Monarch»</h3>
-            <p class="product-card__description">Растворимый, 150 г</p>
-            <p class="product-card__price">259 ₽</p>
-            <a class="button button--primary product-card__button" href="product.html" aria-label="Подробнее о товаре Кофе «Jacobs Monarch»">Подробнее</a>
-          </article>
+        <article class="product-card" data-category="drinks" data-price="259">
+          <img src="images/coffee.jpg" alt="Банка растворимого кофе «Jacobs Monarch»" class="product-card__image" width="400" height="300">
+          <h3 class="product-card__title">Кофе «Jacobs Monarch»</h3>
+          <p class="product-card__description">Растворимый, 150 г</p>
+          <p class="product-card__price">259 ₽</p>
+          <a href="product-coffee.html" class="button button--secondary product-card__button">Подробнее</a>
+        </article>
 
-          <article class="product-card">
-            <img class="product-card__image" src="images/choko.jpg" srcset="images/choko.jpg 800w"
-                 sizes="(min-width: 900px) 380px, (min-width: 600px) 50vw, 100vw"
-                 alt="Плитка молочного шоколада «Алёнка»" width="400" height="300" loading="lazy" decoding="async">
-            <h3 class="product-card__title">Шоколад «Алёнка»</h3>
-            <p class="product-card__description">Молочный, 100 г</p>
-            <p class="product-card__price">99 ₽</p>
-            <a class="button button--primary product-card__button" href="product.html" aria-label="Подробнее о товаре Шоколад «Алёнка»">Подробнее</a>
-          </article>
-        </div>
-      </section>
+        <article class="product-card" data-category="sweets" data-price="99">
+          <img src="images/choko.jpg" alt="Плитка молочного шоколада «Алёнка»" class="product-card__image" width="400" height="300">
+          <h3 class="product-card__title">Шоколад «Алёнка»</h3>
+          <p class="product-card__description">Молочный, 100 г</p>
+          <p class="product-card__price">99 ₽</p>
+          <a href="product-choko.html" class="button button--secondary product-card__button">Подробнее</a>
+        </article>
+      </div>
     </div>
   </main>
 
-<footer class="site-footer">
-  <div class="site-footer__inner">
-    <!-- Левая колонка: Логотип и слоган -->
-    <div class="site-footer__col site-footer__brand">
-      <p class="site-footer__slogan">Свежие продукты каждый день</p>
-      <a href="index.html" class="site-header__logo">
-        <img src="images/perek_logo.jpeg" alt="Логотип Перекрёсток" class="logo-img" width="32" height="32">
-        <span>Перекрёсток</span>
-      </a>
-      <p class="site-footer__copy">© 2026 Магазин «Перекрёсток». Все права защищены.</p>
-    </div>
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <div class="site-footer__col site-footer__brand">
+        <p class="site-footer__slogan">Свежие продукты каждый день</p>
+        <a href="index.html" class="site-header__logo">
+          <img src="images/perek_logo.jpeg" alt="Логотип Перекрёсток" class="logo-img" width="36" height="36">
+          <span>Перекрёсток</span>
+        </a>
+        <p class="site-footer__copy">© 2026 Магазин «Перекрёсток». Все права защищены.</p>
+      </div>
 
-    <!-- Центральная колонка: Навигация -->
-    <div class="site-footer__col">
-      <h3 class="site-footer__heading">Навигация</h3>
-      <ul class="site-footer__nav">
-        <li><a href="index.html">Главная</a></li>
-        <li><a href="catalog.html">Каталог</a></li>
-        <li><a href="index.html#about">О магазине</a></li>
-      </ul>
-    </div>
+      <div class="site-footer__col">
+        <h3 class="site-footer__heading">Навигация</h3>
+        <ul class="site-footer__nav">
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="catalog.html">Каталог</a></li>
+          <li><a href="about.html">О магазине</a></li>
+        </ul>
+      </div>
 
-    <!-- Правая колонка: Контакты -->
-    <div class="site-footer__col">
-      <h3 class="site-footer__heading">Контакты</h3>
-      <ul class="site-footer__contacts">
-        <li><strong>Адрес:</strong> г. Москва, пр-т Вернадского, д. 78</li>
-        <li><strong>Телефон:</strong> <a href="tel:+78002009555">8 (800) 200-95-55</a></li>
-        <li><strong>Почта:</strong> <a href="mailto:info@perekrestok-edu.ru">info@perekrestok-edu.ru</a></li>
-        <li><strong>Часы работы:</strong> Ежедневно с 08:00 до 23:00</li>
-      </ul>
+      <div class="site-footer__col">
+        <h3 class="site-footer__heading">Контакты</h3>
+        <ul class="site-footer__contacts">
+          <li><strong>Адрес:</strong> г. Москва, пр-т Вернадского, д. 78</li>
+          <li><strong>Телефон:</strong> <a href="tel:+78002009555">8 (800) 200-95-55</a></li>
+          <li><strong>Почта:</strong> <a href="mailto:info@perekrestok-edu.ru">info@perekrestok-edu.ru</a></li>
+          <li><strong>Часы работы:</strong> Ежедневно с 08:00 до 23:00</li>
+        </ul>
+      </div>
     </div>
-  </div>
-</footer>
+  </footer>
 
-  <a class="scroll-top" href="#" aria-label="Наверх">↑</a>
+  <a href="#top" class="scroll-top" aria-label="Наверх">↑</a>
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>

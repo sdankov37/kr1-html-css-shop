@@ -681,7 +681,7 @@ a:hover { color: var(--color-primary-dark); }
     scroll-behavior: auto !important;
   }
 }
-/* ===== Логотип в шапке и подвале ===== */
+/* ===== Логотип (perek_logo.jpeg) в шапке и подвале ===== */
 .site-header__logo {
   display: inline-flex;
   align-items: center;
@@ -692,7 +692,13 @@ a:hover { color: var(--color-primary-dark); }
   text-decoration: none;
   letter-spacing: .3px;
 }
-.logo-icon {
+
+.site-header__logo img,
+.logo-img {
+  width: 36px;
+  height: 36px;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
   flex-shrink: 0;
 }
 
@@ -755,7 +761,6 @@ main.main--home {
   color: var(--color-primary-dark);
 }
 
-/* Адаптив подвала: 3 колонки на экранах от 768px */
 @media (min-width: 768px) {
   .site-footer__inner {
     grid-template-columns: 1.2fr 0.8fr 1.2fr;

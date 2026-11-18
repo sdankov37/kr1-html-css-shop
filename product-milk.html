@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Молоко «Простоквашино» — Перекрёсток</title>
+  <link rel="icon" type="image/jpeg" href="perek_logo.jpeg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body id="top">
+  <a href="#main" class="skip-link">Перейти к содержимому</a>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a href="index.html" class="site-header__logo">
+        <img src="perek_logo.jpeg" alt="Логотип Перекрёсток" class="logo-img" width="36" height="36">
+        <span>Перекрёсток</span>
+      </a>
+
+      <nav class="site-nav" aria-label="Основная навигация">
+        <ul class="site-nav__list">
+          <li><a href="index.html" class="site-nav__link">Главная</a></li>
+          <li><a href="catalog.html" class="site-nav__link site-nav__link--active">Каталог</a></li>
+          <li><a href="about.html" class="site-nav__link">О магазине</a></li>
+          <li><a href="contacts.html" class="site-nav__link">Контакты</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <nav class="breadcrumbs" aria-label="Хлебные крошки">
+      <a href="index.html" class="breadcrumbs__link">Главная</a>
+      <span class="breadcrumbs__current"><a href="catalog.html" class="breadcrumbs__link">Каталог</a></span>
+      <span class="breadcrumbs__current">Молоко «Простоквашино»</span>
+    </nav>
+
+    <div class="js-message" role="status" aria-live="polite"></div>
+
+    <div class="product-layout">
+      <div class="product-gallery">
+        <img src="images/milk.jpg" alt="Бутылка молока «Простоквашино» 3,2% на светлом фоне" class="product-gallery__main" width="600" height="600">
+        <div class="product-gallery__thumbs">
+          <img src="images/milk.jpg" alt="Молоко «Простоквашино», вид спереди" class="product-gallery__thumb" tabindex="0">
+          <img src="images/milk-side.jpg" alt="Молоко «Простоквашино», вид сбоку" class="product-gallery__thumb" tabindex="0">
+          <img src="images/milk-close.jpg" alt="Молоко «Простоквашино», упаковка крупным планом" class="product-gallery__thumb" tabindex="0">
+        </div>
+      </div>
+
+      <div class="product-info">
+        <h1 class="product-info__title">Молоко «Простоквашино» 3,2%, 1 л</h1>
+        <p class="product-info__price">89 ₽</p>
+        <p class="product-info__description">
+          Натуральное пастеризованное коровье молоко жирностью 3,2%. Изготовлено из отборного фермерского сырья без добавления сухого молока и консервантов. Подходит для всей семьи, приготовления каш, выпечки и добавления в кофе.
+        </p>
+        <a href="order.html" class="button button--primary">Оформить заявку</a>
+      </div>
+
+      <aside class="product-aside" aria-label="Условия покупки">
+        <h2 class="product-aside__title">Дополнительно</h2>
+        <ul class="product-aside__list">
+          <li>Срок хранения: 7 суток при температуре от +2 °C до +6 °C</li>
+          <li>Доставка: курьером в день заказа или самовывоз</li>
+          <li>Оплата: банковской картой онлайн или при получении</li>
+        </ul>
+      </aside>
+    </div>
+
+    <section class="section">
+      <h2 class="section__title">Характеристики</h2>
+      <div class="table-wrap">
+        <table class="spec-table">
+          <caption>Технические характеристики товара</caption>
+          <thead>
+            <tr>
+              <th scope="col">Параметр</th>
+              <th scope="col">Значение</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Производитель</td>
+              <td>Простоквашино</td>
+            </tr>
+            <tr>
+              <td>Жирность</td>
+              <td>3,2%</td>
+            </tr>
+            <tr>
+              <td>Объём</td>
+              <td>1 л</td>
+            </tr>
+            <tr>
+              <td>Тип обработки</td>
+              <td>Пастеризованное</td>
+            </tr>
+            <tr>
+              <td>Страна производства</td>
+              <td>Россия</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section__title">Отзывы покупателей</h2>
+      <div class="reviews-list">
+        <article class="review">
+          <div class="review__header">
+            <span class="review__author">Анна С.</span>
+            <span class="review__rating" aria-label="Оценка 5 из 5">★★★★★</span>
+          </div>
+          <p class="review__text">Свежее и вкусное молоко с насыщенным сливочным вкусом. Беру каждую неделю для утреннего кофе и каш ребёнку.</p>
+        </article>
+
+        <article class="review">
+          <div class="review__header">
+            <span class="review__author">Иван П.</span>
+            <span class="review__rating" aria-label="Оценка 4 из 5">★★★★☆</span>
+          </div>
+          <p class="review__text">Хорошее соотношение цены и качества, удобная бутылка с плотной крышкой. Всегда привозят с хорошим запасом по сроку годности.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section__title">Похожие товары</h2>
+      <div class="products-grid">
+        <article class="product-card">
+          <img src="images/bread.jpg" alt="Буханка хлеба «Бородинский»" class="product-card__image">
+          <h3 class="product-card__title">Хлеб «Бородинский»</h3>
+          <p class="product-card__description">400 г, нарезной</p>
+          <p class="product-card__price">55 ₽</p>
+          <a href="product-bread.html" class="button button--secondary product-card__button">Подробнее</a>
+        </article>
+
+        <article class="product-card">
+          <img src="images/cheese.jpg" alt="Кусок сыра «Российский»" class="product-card__image">
+          <h3 class="product-card__title">Сыр «Российский»</h3>
+          <p class="product-card__description">45%, 200 г</p>
+          <p class="product-card__price">399 ₽</p>
+          <a href="product-cheese.html" class="button button--secondary product-card__button">Подробнее</a>
+        </article>
+
+        <article class="product-card">
+          <span class="product-card__badge">Скидка</span>
+          <img src="images/apples.jpg" alt="Два яблока сорта «Гренни Смит»" class="product-card__image">
+          <h3 class="product-card__title">Яблоки «Гренни Смит»</h3>
+          <p class="product-card__description">1 кг</p>
+          <p class="product-card__price">149 ₽ <span class="product-card__price--old">189 ₽</span></p>
+          <a href="product-apples.html" class="button button--secondary product-card__button">Подробнее</a>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <div class="site-footer__col site-footer__brand">
+        <p class="site-footer__slogan">Свежие продукты каждый день</p>
+        <a href="index.html" class="site-header__logo">
+          <img src="perek_logo.jpeg" alt="Логотип Перекрёсток" class="logo-img" width="36" height="36">
+          <span>Перекрёсток</span>
+        </a>
+        <p class="site-footer__copy">© 2026 Магазин «Перекрёсток». Все права защищены.</p>
+      </div>
+
+      <div class="site-footer__col">
+        <h3 class="site-footer__heading">Навигация</h3>
+        <ul class="site-footer__nav">
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="catalog.html">Каталог</a></li>
+          <li><a href="about.html">О магазине</a></li>
+        </ul>
+      </div>
+
+      <div class="site-footer__col">
+        <h3 class="site-footer__heading">Контакты</h3>
+        <ul class="site-footer__contacts">
+          <li><strong>Адрес:</strong> г. Москва, пр-т Вернадского, д. 78</li>
+          <li><strong>Телефон:</strong> <a href="tel:+78002009555">8 (800) 200-95-55</a></li>
+          <li><strong>Почта:</strong> <a href="mailto:info@perekrestok-edu.ru">info@perekrestok-edu.ru</a></li>
+          <li><strong>Часы работы:</strong> Ежедневно с 08:00 до 23:00</li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#top" class="scroll-top" aria-label="Наверх">↑</a>
+  <script src="data.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,176 @@
+<!-- ============================================================
+     1. ФАЙЛ: about.html (Страница «О магазине»)
+     ============================================================ -->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>О магазине — Перекрёсток</title>
+  <link rel="icon" type="image/jpeg" href="perek_logo.jpeg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body id="top">
+  <a href="#main" class="skip-link">Перейти к содержимому</a>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a href="index.html" class="site-header__logo">
+        <img src="perek_logo.jpeg" alt="Логотип Перекрёсток" class="logo-img" width="36" height="36">
+        <span>Перекрёсток</span>
+      </a>
+
+      <nav class="site-nav" aria-label="Основная навигация">
+        <ul class="site-nav__list">
+          <li><a href="index.html" class="site-nav__link">Главная</a></li>
+          <li><a href="catalog.html" class="site-nav__link">Каталог</a></li>
+          <li><a href="about.html" class="site-nav__link site-nav__link--active">О магазине</a></li>
+          <li><a href="contacts.html" class="site-nav__link">Контакты</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <nav class="breadcrumbs" aria-label="Хлебные крошки">
+      <a href="index.html" class="breadcrumbs__link">Главная</a>
+      <span class="breadcrumbs__current">О магазине</span>
+    </nav>
+
+    <section class="hero">
+      <div class="hero__content">
+        <h1 class="hero__title">О магазине «Перекрёсток»</h1>
+        <p class="hero__text">
+          «Перекрёсток» — современный супермаркет и учебный проект интернет-магазина продуктов. Мы объединяем строгий контроль свежести, удобный онлайн-каталог и быструю доставку до двери.
+        </p>
+        <a href="catalog.html" class="button button--primary">Перейти в каталог</a>
+      </div>
+      <div class="hero__media">
+        <img src="perek_logo.jpeg" alt="Супермаркет Перекрёсток" width="500" height="500">
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section__title">Наши преимущества</h2>
+      <ul class="delivery-list">
+        <li class="delivery-list__item">
+          <h3 class="delivery-list__title">Ежедневные поставки</h3>
+          <p class="delivery-list__text">
+            Свежие молочные продукты, горячий хлеб, сезонные овощи и фрукты поступают на полки магазина каждое утро напрямую от проверенных фермерских хозяйств и производителей.
+          </p>
+        </li>
+        <li class="delivery-list__item">
+          <h3 class="delivery-list__title">Контроль качества</h3>
+          <p class="delivery-list__text">
+            Мы строго следим за температурным режимом хранения и сроками годности каждой партии, чтобы вы получали только безопасные и натуральные продукты.
+          </p>
+        </li>
+        <li class="delivery-list__item">
+          <h3 class="delivery-list__title">Удобный сервис</h3>
+          <p class="delivery-list__text">
+            Оформить заказ на сайте можно за пару минут: выберите нужные позиции в каталоге, укажите удобное время и получите покупки с курьером или самовывозом.
+          </p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2 class="section__title">Цифры и стандарты работы</h2>
+      <div class="table-wrap">
+        <table class="spec-table">
+          <caption>Ключевые показатели нашего магазина</caption>
+          <thead>
+            <tr>
+              <th scope="col">Показатель</th>
+              <th scope="col">Значение</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Ассортимент товаров</td>
+              <td>Более 5 000 наименований свежих продуктов и товаров для дома</td>
+            </tr>
+            <tr>
+              <td>Поставщики</td>
+              <td>Свыше 120 локальных фермерских хозяйств и крупных брендов</td>
+            </tr>
+            <tr>
+              <td>Время сборки заказа</td>
+              <td>От 20 минут с проверкой сроков годности каждого товара</td>
+            </tr>
+            <tr>
+              <td>География доставки</td>
+              <td>Москва и ближайшее Подмосковье без выходных</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <h2 class="section__title">Часто задаваемые вопросы</h2>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary class="faq-item__question">Как вы проверяете свежесть продуктов перед отправкой?</summary>
+          <p class="faq-item__answer">
+            При сборке каждого заказа сотрудники магазина проверяют целостность упаковки и остаточный срок годности. Мы отбираем только те товары, у которых прошло не более половины установленного производителем срока хранения.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-item__question">Можно ли оформить самовывоз из магазина?</summary>
+          <p class="faq-item__answer">
+            Да, вы можете бесплатно забрать собранный заказ в нашем магазине по адресу г. Москва, пр-т Вернадского, д. 78. Заказ хранится в специальной зоне с соблюдением температурного режима в течение 24 часов.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-item__question">Как связаться со службой поддержки покупателей?</summary>
+          <p class="faq-item__answer">
+            Вы можете позвонить нам по единому номеру 8 (800) 200-95-55 ежедневно с 08:00 до 23:00 или написать на электронную почту. Наши специалисты оперативно помогут решить любой вопрос по заказу или возврату.
+          </p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <!-- Левая колонка: Логотип и слоган -->
+    <div class="site-footer__col site-footer__brand">
+      <p class="site-footer__slogan">Свежие продукты каждый день</p>
+      <a href="index.html" class="site-header__logo">
+        <img src="images/perek_logo.jpeg" alt="Логотип Перекрёсток" class="logo-img" width="32" height="32">
+        <span>Перекрёсток</span>
+      </a>
+      <p class="site-footer__copy">© 2026 Магазин «Перекрёсток». Все права защищены.</p>
+    </div>
+
+    <!-- Центральная колонка: Навигация -->
+    <div class="site-footer__col">
+      <h3 class="site-footer__heading">Навигация</h3>
+      <ul class="site-footer__nav">
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="catalog.html">Каталог</a></li>
+        <li><a href="about.html">О магазине</a></li>
+      </ul>
+    </div>
+
+    <!-- Правая колонка: Контакты -->
+    <div class="site-footer__col">
+      <h3 class="site-footer__heading">Контакты</h3>
+      <ul class="site-footer__contacts">
+        <li><strong>Адрес:</strong> г. Москва, пр-т Вернадского, д. 78</li>
+        <li><strong>Телефон:</strong> <a href="tel:+78002009555">8 (800) 200-95-55</a></li>
+        <li><strong>Почта:</strong> <a href="mailto:info@perekrestok-edu.ru">info@perekrestok-edu.ru</a></li>
+        <li><strong>Часы работы:</strong> Ежедневно с 08:00 до 23:00</li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+  <a href="#top" class="scroll-top" aria-label="Наверх">↑</a>
+  <script src="data.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
