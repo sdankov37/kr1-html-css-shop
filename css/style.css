@@ -3,7 +3,8 @@
    Работа №12: адаптив (mobile-first)
    Работа №13: доступность
    Работа №14: responsive images, адаптивные формы и таблицы
-   Работа №15: стиль блока .js-message для вывода из JS
+   Работа №15: стиль блока .js-message
+   Контакты: расписание, карта, доставка
    ============================================================ */
 
 /* ===== 1. Переменные ===== */
@@ -452,9 +453,7 @@ a:hover { color: var(--color-primary-dark); }
 }
 .scroll-top:hover { background-color: var(--color-primary-dark); color: var(--color-white); }
 
-/* ===== 19. Блок .js-message =====
-   Пустой по умолчанию: JS заполнит его через textContent.
-   Пока пустой — не занимает места (используем :empty). */
+/* ===== 19. Блок .js-message ===== */
 .js-message {
   max-width: var(--container);
   margin: 0 auto var(--space-lg);
@@ -465,19 +464,144 @@ a:hover { color: var(--color-primary-dark); }
   color: var(--color-text);
   font-weight: 500;
 }
-.js-message:empty {
-  display: none;
+.js-message:empty { display: none; }
+
+/* ===== 20. Страница контактов: расписание, карта, доставка ===== */
+
+/* --- Таблица «Время работы» --- */
+.schedule-table {
+  width: 100%;
+  max-width: 720px;
+  border-collapse: collapse;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+.schedule-table caption {
+  caption-side: top;
+  padding: var(--space-sm) 0;
+  text-align: left;
+  font-weight: 700;
+  color: var(--color-muted);
+  font-size: 14px;
+}
+.schedule-table th,
+.schedule-table td {
+  padding: var(--space-sm) var(--space-md);
+  text-align: left;
+  border-bottom: 1px solid var(--color-border);
+  font-size: 15px;
+}
+.schedule-table th {
+  font-weight: 600;
+  width: 55%;
+  background-color: var(--color-bg);
+}
+.schedule-table tr:last-child th,
+.schedule-table tr:last-child td { border-bottom: none; }
+
+/* --- Карта --- */
+.map-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  min-height: 280px;
+  margin-top: var(--space-md);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background-color: var(--color-bg);
+}
+.map-wrapper iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+.map-actions {
+  margin: var(--space-md) 0 0;
+}
+
+/* --- Доставка --- */
+.delivery-list {
+  display: grid;
+  gap: var(--space-md);
+  margin: var(--space-md) 0 0;
+  padding: 0;
+  list-style: none;
+}
+.delivery-list__item {
+  padding: var(--space-md);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background-color: var(--color-surface);
+}
+.delivery-list__title {
+  margin: 0 0 var(--space-xs);
+  font-size: 16px;
+  color: var(--color-primary-dark);
+}
+.delivery-list__text {
+  margin: 0;
+  color: var(--color-muted);
+  font-size: 15px;
+}
+
+/* Мобильное представление расписания: каждая строка — карточка */
+@media (max-width: 599px) {
+  .schedule-table,
+  .schedule-table tbody,
+  .schedule-table tr,
+  .schedule-table th,
+  .schedule-table td {
+    display: block;
+    width: 100%;
+  }
+  .schedule-table {
+    border: none;
+    background: transparent;
+    border-radius: 0;
+    overflow: visible;
+  }
+  .schedule-table tr {
+    margin-bottom: var(--space-sm);
+    padding: var(--space-sm) var(--space-md);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    background-color: var(--color-surface);
+  }
+  .schedule-table tr:last-child { margin-bottom: 0; }
+  .schedule-table th,
+  .schedule-table td {
+    padding: 0;
+    border: none;
+    background: transparent;
+  }
+  .schedule-table th {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    color: var(--color-muted);
+    font-weight: 600;
+  }
+  .schedule-table td {
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 2px;
+  }
 }
 
 /* ============================================================
-   20. Маленькие телефоны: 480px+
+   21. Маленькие телефоны: 480px+
    ============================================================ */
 @media (min-width: 480px) {
   .filters-form__row { grid-template-columns: 1fr 1fr; }
 }
 
 /* ============================================================
-   21. Планшет: >= 600px
+   22. Планшет: >= 600px
    ============================================================ */
 @media (min-width: 600px) {
   main { padding: var(--space-lg); }
@@ -485,6 +609,8 @@ a:hover { color: var(--color-primary-dark); }
   .products-grid { grid-template-columns: repeat(2, 1fr); }
   .reviews-list { grid-template-columns: repeat(2, 1fr); }
   .site-footer__inner { grid-template-columns: 1fr 1fr; }
+
+  .delivery-list { grid-template-columns: repeat(3, 1fr); }
 
   .order-form__row { grid-template-columns: 1fr 1fr; }
   .order-form__actions .button { flex: 0 1 auto; }
@@ -513,7 +639,7 @@ a:hover { color: var(--color-primary-dark); }
 }
 
 /* ============================================================
-   22. Десктоп: >= 900px
+   23. Десктоп: >= 900px
    ============================================================ */
 @media (min-width: 900px) {
   main { padding: var(--space-xl); }
@@ -538,7 +664,7 @@ a:hover { color: var(--color-primary-dark); }
 }
 
 /* ============================================================
-   23. Широкий десктоп: >= 1200px
+   24. Широкий десктоп: >= 1200px
    ============================================================ */
 @media (min-width: 1200px) {
   .hero__title { font-size: 44px; }
@@ -546,12 +672,93 @@ a:hover { color: var(--color-primary-dark); }
 }
 
 /* ============================================================
-   24. Уменьшенное движение
+   25. Уменьшенное движение
    ============================================================ */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     transition-duration: 0.01ms !important;
     animation-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+  }
+}
+/* ===== Логотип в шапке и подвале ===== */
+.site-header__logo {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--color-primary);
+  text-decoration: none;
+  letter-spacing: .3px;
+}
+.logo-icon {
+  flex-shrink: 0;
+}
+
+/* ===== Высота страниц (минимум 2 и 3 экрана) ===== */
+main {
+  min-height: 200vh; /* Все страницы: минимум 2 экрана */
+}
+main.main--home {
+  min-height: 300vh; /* Главная страница: минимум 3 экрана */
+}
+
+/* ===== Обновлённый 3-колоночный подвал ===== */
+.site-footer__inner {
+  max-width: var(--container);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-lg);
+  font-size: 14px;
+  color: var(--color-muted);
+}
+
+.site-footer__heading {
+  margin: 0 0 var(--space-sm);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.site-footer__slogan {
+  margin: var(--space-sm) 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.site-footer__copy {
+  margin: var(--space-sm) 0 0;
+  font-size: 13px;
+}
+
+.site-footer__nav,
+.site-footer__contacts {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: var(--space-xs);
+}
+
+.site-footer__nav a,
+.site-footer__contacts a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+.site-footer__nav a:hover,
+.site-footer__contacts a:hover {
+  text-decoration: underline;
+  color: var(--color-primary-dark);
+}
+
+/* Адаптив подвала: 3 колонки на экранах от 768px */
+@media (min-width: 768px) {
+  .site-footer__inner {
+    grid-template-columns: 1.2fr 0.8fr 1.2fr;
+    align-items: start;
   }
 }

@@ -3,29 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Контакты учебного интернет-магазина «Перекрёсток».">
+  <meta name="description" content="Контакты учебного интернет-магазина «Перекрёсток»: адрес, телефон, время работы, карта и условия доставки.">
   <title>Контакты — Перекрёсток</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="images/perek_logo.jpeg">
   <script src="js/data.js" defer></script>
   <script src="js/main.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Перейти к содержимому</a>
 
-  <header class="site-header">
-    <div class="site-header__inner">
-      <a class="site-header__logo" href="index.html">Перекрёсток</a>
-      <nav class="site-nav" aria-label="Основная навигация">
-        <ul class="site-nav__list">
-          <li><a class="site-nav__link" href="index.html">Главная</a></li>
-          <li><a class="site-nav__link" href="catalog.html">Каталог</a></li>
-          <li><a class="site-nav__link" href="product.html">Товар</a></li>
-          <li><a class="site-nav__link" href="order.html">Заявка</a></li>
-          <li><a class="site-nav__link site-nav__link--active" href="contacts.html" aria-current="page">Контакты</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+<header class="site-header">
+  <div class="site-header__inner">
+    <a href="index.html" class="site-header__logo">
+      <img src="images/perek_logo.jpeg" alt="Логотип Перекрёсток" class="logo-img" width="32" height="32">
+      <span>Перекрёсток</span>
+    </a>
+
+    <nav class="site-nav" aria-label="Основная навигация">
+      <ul class="site-nav__list">
+        <li><a href="index.html" class="site-nav__link site-nav__link--active">Главная</a></li>
+        <li><a href="catalog.html" class="site-nav__link">Каталог</a></li>
+        <li><a href="index.html#about" class="site-nav__link">О магазине</a></li>
+        <li><a href="contacts.html" class="site-nav__link">Контакты</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
 
   <main id="main">
     <nav class="breadcrumbs" aria-label="Хлебные крошки">
@@ -35,28 +39,125 @@
 
     <section class="section">
       <h1 class="section__title">Контакты</h1>
-      <p>Контактная информация учебного интернет-магазина «Перекрёсток».</p>
+      <p>Контактная информация учебного интернет-магазина «Перекрёсток»: адрес магазина, телефон, время работы, карта и условия доставки.</p>
+    </section>
+
+    <!-- 1. О магазине -->
+    <section class="section">
+      <h2 class="section__title">О магазине</h2>
+      <p>«Перекрёсток» — сеть супермаркетов и учебный проект интернет-магазина продуктов. В ассортименте — свежие молочные продукты, хлеб, фрукты, напитки и сладости от проверенных производителей.</p>
+      <p>Мы работаем каждый день и доставляем заказы по Москве и ближайшему Подмосковью. Если у вас есть вопросы по заказу, доставке или качеству товара — позвоните нам или оформите заявку на странице <a href="order.html">оформления заявки</a>.</p>
+    </section>
+
+    <!-- 2. Контактный телефон и адрес -->
+    <section class="section">
+      <h2 class="section__title">Контактный телефон и адрес</h2>
       <ul class="contacts-list">
         <li class="contacts-list__item"><strong>Телефон:</strong> <a href="tel:+79000000000">+7 (900) 000-00-00</a></li>
         <li class="contacts-list__item"><strong>E-mail:</strong> <a href="mailto:info@perekrestok.example">info@perekrestok.example</a></li>
-        <li class="contacts-list__item"><strong>Адрес:</strong> г. Москва, учебный проект</li>
-        <li class="contacts-list__item"><strong>Режим работы:</strong> ежедневно, 8:00–23:00</li>
+        <li class="contacts-list__item"><strong>Адрес магазина:</strong> г. Москва, ул. Тверская, 12, стр. 1</li>
+        <li class="contacts-list__item"><strong>Юридический адрес:</strong> г. Москва, ул. Тверская, 12</li>
       </ul>
     </section>
 
+    <!-- 3. Время работы -->
+    <section class="section">
+      <h2 class="section__title">Время работы</h2>
+      <table class="schedule-table">
+        <caption>Расписание работы магазина, колл-центра и доставки</caption>
+        <tbody>
+          <tr><th scope="row">Понедельник — пятница</th><td>8:00 — 23:00</td></tr>
+          <tr><th scope="row">Суббота</th><td>9:00 — 22:00</td></tr>
+          <tr><th scope="row">Воскресенье</th><td>9:00 — 22:00</td></tr>
+          <tr><th scope="row">Колл-центр</th><td>ежедневно, 8:00 — 22:00</td></tr>
+          <tr><th scope="row">Доставка заказов</th><td>ежедневно, 10:00 — 21:00</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- 4. Карта -->
+    <section class="section">
+      <h2 class="section__title">Как нас найти</h2>
+      <p>Магазин находится на ул. Тверская, 12 — 3 минуты пешком от метро «Тверская». Вход со стороны улицы, рядом парковка.</p>
+      <div class="map-wrapper">
+        <!--
+          Карта через OpenStreetMap: не требует API-ключа.
+          Если нужен Яндекс.Карты — замените src на:
+          https://yandex.ru/map-widget/v1/?ll=37.6105%2C55.7615&z=16&pt=37.6105%2C55.7615
+        -->
+        <iframe
+          src="https://www.openstreetmap.org/export/embed.html?bbox=37.6040%2C55.7575%2C37.6170%2C55.7655&amp;layer=mapnik&amp;marker=55.7615%2C37.6105"
+          title="Карта: магазин «Перекрёсток» на ул. Тверская, 12 в Москве"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <p class="map-actions">
+        <a class="button button--secondary" href="https://www.openstreetmap.org/?mlat=55.7615&amp;mlon=37.6105#map=16/55.7615/37.6105" target="_blank" rel="noopener noreferrer">Открыть на карте</a>
+      </p>
+    </section>
+
+    <!-- 5. Доставка -->
+    <section class="section">
+      <h2 class="section__title">Доставка</h2>
+      <p>Доставляем продукты по Москве и ближайшему Подмосковью. Бесплатно — при заказе от 1500 ₽.</p>
+      <ul class="delivery-list">
+        <li class="delivery-list__item">
+          <h3 class="delivery-list__title">Курьером по Москве</h3>
+          <p class="delivery-list__text">В день заказа — 299 ₽, в течение 2 часов — 399 ₽. Бесплатно при заказе от 1500 ₽.</p>
+        </li>
+        <li class="delivery-list__item">
+          <h3 class="delivery-list__title">По Подмосковью</h3>
+          <p class="delivery-list__text">От 2 до 5 дней в зависимости от расстояния. Стоимость — от 399 ₽.</p>
+        </li>
+        <li class="delivery-list__item">
+          <h3 class="delivery-list__title">Самовывоз</h3>
+          <p class="delivery-list__text">Бесплатно. Забрать заказ можно в магазине на ул. Тверская, 12 с 8:00 до 22:00.</p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- 6. Обратная связь -->
     <section class="section">
       <h2 class="section__title">Обратная связь</h2>
-      <p>Чтобы оформить заявку, перейдите на страницу оформления.</p>
+      <p>Оформить заявку или задать вопрос можно на странице оформления.</p>
       <a class="button button--primary" href="order.html">Перейти к форме заявки</a>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="site-footer__inner">
-      <p>© 2026 Перекрёсток. Учебный проект.</p>
-      <p>Дисциплина: Фронтенд и бэкенд разработка</p>
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <!-- Левая колонка: Логотип и слоган -->
+    <div class="site-footer__col site-footer__brand">
+      <p class="site-footer__slogan">Свежие продукты каждый день</p>
+      <a href="index.html" class="site-header__logo">
+        <img src="images/perek_logo.jpeg" alt="Логотип Перекрёсток" class="logo-img" width="32" height="32">
+        <span>Перекрёсток</span>
+      </a>
+      <p class="site-footer__copy">© 2026 Магазин «Перекрёсток». Все права защищены.</p>
     </div>
-  </footer>
+
+    <!-- Центральная колонка: Навигация -->
+    <div class="site-footer__col">
+      <h3 class="site-footer__heading">Навигация</h3>
+      <ul class="site-footer__nav">
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="catalog.html">Каталог</a></li>
+        <li><a href="index.html#about">О магазине</a></li>
+      </ul>
+    </div>
+
+    <!-- Правая колонка: Контакты -->
+    <div class="site-footer__col">
+      <h3 class="site-footer__heading">Контакты</h3>
+      <ul class="site-footer__contacts">
+        <li><strong>Адрес:</strong> г. Москва, пр-т Вернадского, д. 78</li>
+        <li><strong>Телефон:</strong> <a href="tel:+78002009555">8 (800) 200-95-55</a></li>
+        <li><strong>Почта:</strong> <a href="mailto:info@perekrestok-edu.ru">info@perekrestok-edu.ru</a></li>
+        <li><strong>Часы работы:</strong> Ежедневно с 08:00 до 23:00</li>
+      </ul>
+    </div>
+  </div>
+</footer>
 
   <a class="scroll-top" href="#" aria-label="Наверх">↑</a>
 </body>

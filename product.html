@@ -6,26 +6,30 @@
   <meta name="description" content="Карточка товара «Молоко Простоквашино» в учебном интернет-магазине «Перекрёсток».">
   <title>Молоко «Простоквашино» — Перекрёсток</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="images/perek_logo.jpeg">
   <script src="js/data.js" defer></script>
   <script src="js/main.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Перейти к содержимому</a>
 
-  <header class="site-header">
-    <div class="site-header__inner">
-      <a class="site-header__logo" href="index.html">Перекрёсток</a>
-      <nav class="site-nav" aria-label="Основная навигация">
-        <ul class="site-nav__list">
-          <li><a class="site-nav__link" href="index.html">Главная</a></li>
-          <li><a class="site-nav__link" href="catalog.html">Каталог</a></li>
-          <li><a class="site-nav__link site-nav__link--active" href="product.html" aria-current="page">Товар</a></li>
-          <li><a class="site-nav__link" href="order.html">Заявка</a></li>
-          <li><a class="site-nav__link" href="contacts.html">Контакты</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+<header class="site-header">
+  <div class="site-header__inner">
+    <a href="index.html" class="site-header__logo">
+      <img src="images/perek_logo.jpeg" alt="Логотип Перекрёсток" class="logo-img" width="32" height="32">
+      <span>Перекрёсток</span>
+    </a>
+
+    <nav class="site-nav" aria-label="Основная навигация">
+      <ul class="site-nav__list">
+        <li><a href="index.html" class="site-nav__link site-nav__link--active">Главная</a></li>
+        <li><a href="catalog.html" class="site-nav__link">Каталог</a></li>
+        <li><a href="index.html#about" class="site-nav__link">О магазине</a></li>
+        <li><a href="contacts.html" class="site-nav__link">Контакты</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
 
   <main id="main">
     <nav class="breadcrumbs" aria-label="Хлебные крошки">
@@ -112,12 +116,40 @@
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="site-footer__inner">
-      <p>© 2026 Перекрёсток. Учебный проект.</p>
-      <p>Дисциплина: Фронтенд и бэкенд разработка</p>
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <!-- Левая колонка: Логотип и слоган -->
+    <div class="site-footer__col site-footer__brand">
+      <p class="site-footer__slogan">Свежие продукты каждый день</p>
+      <a href="index.html" class="site-header__logo">
+        <img src="images/perek_logo.jpeg" alt="Логотип Перекрёсток" class="logo-img" width="32" height="32">
+        <span>Перекрёсток</span>
+      </a>
+      <p class="site-footer__copy">© 2026 Магазин «Перекрёсток». Все права защищены.</p>
     </div>
-  </footer>
+
+    <!-- Центральная колонка: Навигация -->
+    <div class="site-footer__col">
+      <h3 class="site-footer__heading">Навигация</h3>
+      <ul class="site-footer__nav">
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="catalog.html">Каталог</a></li>
+        <li><a href="index.html#about">О магазине</a></li>
+      </ul>
+    </div>
+
+    <!-- Правая колонка: Контакты -->
+    <div class="site-footer__col">
+      <h3 class="site-footer__heading">Контакты</h3>
+      <ul class="site-footer__contacts">
+        <li><strong>Адрес:</strong> г. Москва, пр-т Вернадского, д. 78</li>
+        <li><strong>Телефон:</strong> <a href="tel:+78002009555">8 (800) 200-95-55</a></li>
+        <li><strong>Почта:</strong> <a href="mailto:info@perekrestok-edu.ru">info@perekrestok-edu.ru</a></li>
+        <li><strong>Часы работы:</strong> Ежедневно с 08:00 до 23:00</li>
+      </ul>
+    </div>
+  </div>
+</footer>
 
   <a class="scroll-top" href="#" aria-label="Наверх">↑</a>
 </body>
