@@ -3,23 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Карточка товара ShopProject: описание, характеристики и кнопка заявки.">
-  <title>Лошадь 1 — ShopProject</title>
+  <meta name="description" content="Карточка товара «Молоко Простоквашино» в учебном интернет-магазине «Перекрёсток».">
+  <title>Молоко «Простоквашино» — Перекрёсток</title>
   <link rel="stylesheet" href="css/style.css">
   <script src="js/main.js" defer></script>
 </head>
 <body>
   <header class="site-header">
     <div class="site-header__inner">
-      <a class="site-header__logo" href="index.html">ShopProject</a>
+      <a class="site-header__logo" href="index.html">Перекрёсток</a>
       <nav class="site-nav" aria-label="Основная навигация">
         <ul class="site-nav__list">
-          <li class="site-nav__item"><a class="site-nav__link" href="index.html">Главная</a></li>
-          <li class="site-nav__item"><a class="site-nav__link" href="catalog.html">Каталог</a></li>
-          <li class="site-nav__item"><a class="site-nav__link" href="category.html">Категория</a></li>
-          <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="product.html">Товар</a></li>
-          <li class="site-nav__item"><a class="site-nav__link" href="order.html">Заявка</a></li>
-          <li class="site-nav__item"><a class="site-nav__link" href="contacts.html">Контакты</a></li>
+          <li><a class="site-nav__link" href="index.html">Главная</a></li>
+          <li><a class="site-nav__link" href="catalog.html">Каталог</a></li>
+          <li><a class="site-nav__link site-nav__link--active" href="product.html">Товар</a></li>
+          <li><a class="site-nav__link" href="order.html">Заявка</a></li>
+          <li><a class="site-nav__link" href="contacts.html">Контакты</a></li>
         </ul>
       </nav>
     </div>
@@ -29,34 +28,31 @@
     <nav class="breadcrumbs" aria-label="Хлебные крошки">
       <a class="breadcrumbs__link" href="index.html">Главная</a>
       <a class="breadcrumbs__link" href="catalog.html">Каталог</a>
-      <span class="breadcrumbs__current">Лошадь 1</span>
+      <span class="breadcrumbs__current">Молоко «Простоквашино»</span>
     </nav>
 
     <div class="product-layout">
       <div class="product-gallery">
-        <img src="images/product-1.jpeg" alt="Лошадь 1" class="product-gallery__main">
+        <img class="product-gallery__main" src="images/milk.jpg" alt="Молоко «Простоквашино» 3,2%" width="600" height="600" decoding="async">
         <div class="product-gallery__thumbs">
-          <img src="images/product-1.jpeg" alt="Лошадь 1 миниатюра 1" class="product-gallery__thumb">
-          <img src="images/product-1.jpeg" alt="Лошадь 1 миниатюра 2" class="product-gallery__thumb">
-          <img src="images/product-1.jpeg" alt="Лошадь 1 миниатюра 3" class="product-gallery__thumb">
+          <img class="product-gallery__thumb" src="images/product-milk.svg" alt="Молоко, вид 1" width="72" height="72" loading="lazy" decoding="async">
+          <img class="product-gallery__thumb" src="images/product-milk.svg" alt="Молоко, вид 2" width="72" height="72" loading="lazy" decoding="async">
+          <img class="product-gallery__thumb" src="images/product-milk.svg" alt="Молоко, вид 3" width="72" height="72" loading="lazy" decoding="async">
         </div>
       </div>
 
       <section class="product-info">
-        <h1 class="product-info__title">Лошадь 1</h1>
-        <p class="product-info__price">1000 ₽</p>
-        <p class="product-info__description">
-          Учебный товар с понятным описанием. Подходит для демонстрации карточки товара
-          в рамках контрольной работы: изображение, характеристики, цена и кнопка заявки.
-        </p>
+        <h1 class="product-info__title">Молоко «Простоквашино»</h1>
+        <p class="product-info__price">89 ₽</p>
+        <p class="product-info__description">Пастеризованное молоко жирностью 3,2%. Объём 1 л. Подходит для всей семьи. Учебный товар для демонстрации карточки товара.</p>
         <a class="button button--primary" href="order.html">Оформить заявку</a>
       </section>
 
       <aside class="product-aside">
         <h2 class="product-aside__title">Дополнительно</h2>
         <ul class="product-aside__list">
-          <li>Гарантия: 12 месяцев</li>
-          <li>Доставка: 1–3 дня</li>
+          <li>Срок хранения: 7 суток</li>
+          <li>Доставка: 1 день</li>
           <li>Оплата: карта или наличные</li>
         </ul>
       </aside>
@@ -64,40 +60,42 @@
 
     <section class="section">
       <h2 class="section__title">Характеристики</h2>
-      <table class="spec-table">
-        <caption class="spec-table__caption">Технические характеристики товара</caption>
-        <thead class="spec-table__head">
-          <tr>
-            <th scope="col">Параметр</th>
-            <th scope="col">Значение</th>
-          </tr>
-        </thead>
-        <tbody class="spec-table__body">
-          <tr><td>Материал</td><td>Металл</td></tr>
-          <tr><td>Вес</td><td>1.2 кг</td></tr>
-          <tr><td>Габариты</td><td>200 × 100 × 50 мм</td></tr>
-          <tr><td>Гарантия</td><td>12 месяцев</td></tr>
-          <tr><td>Страна производства</td><td>Россия</td></tr>
-        </tbody>
-      </table>
+      <div class="table-wrap">
+        <table class="spec-table">
+          <caption>Технические характеристики товара</caption>
+          <thead>
+            <tr>
+              <th scope="col">Параметр</th>
+              <th scope="col">Значение</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Производитель</td><td>Простоквашино</td></tr>
+            <tr><td>Жирность</td><td>3,2%</td></tr>
+            <tr><td>Объём</td><td>1 л</td></tr>
+            <tr><td>Тип</td><td>Пастеризованное</td></tr>
+            <tr><td>Страна производства</td><td>Россия</td></tr>
+          </tbody>
+        </table>
+      </div>
     </section>
 
-    <section class="section" id="reviews">
+    <section class="section">
       <h2 class="section__title">Отзывы покупателей</h2>
       <div class="reviews-list">
         <article class="review">
           <div class="review__header">
             <span class="review__author">Анна С.</span>
-            <span class="review__rating">(5.0)</span>
+            <span class="review__rating">★★★★★</span>
           </div>
-          <p class="review__text">Отличный товар! Быстрая доставка, всё пришло в целости и сохранности. Рекомендую!</p>
+          <p class="review__text">Свежее и вкусное молоко. Беру каждую неделю.</p>
         </article>
         <article class="review">
           <div class="review__header">
             <span class="review__author">Иван П.</span>
-            <span class="review__rating">(4.0)</span>
+            <span class="review__rating">★★★★☆</span>
           </div>
-          <p class="review__text">Качество на высоте, но упаковка была немного помята.</p>
+          <p class="review__text">Хорошее соотношение цены и качества, упаковка удобная.</p>
         </article>
       </div>
     </section>
@@ -105,7 +103,7 @@
 
   <footer class="site-footer">
     <div class="site-footer__inner">
-      <p>&copy; 2026 ShopProject. Учебный проект.</p>
+      <p>© 2026 Перекрёсток. Учебный проект.</p>
       <p>Дисциплина: Фронтенд и бэкенд разработка</p>
     </div>
   </footer>
