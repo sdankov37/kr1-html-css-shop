@@ -9,12 +9,14 @@
   <script src="js/main.js" defer></script>
 </head>
 <body>
+  <a class="skip-link" href="#main">Перейти к содержимому</a>
+
   <header class="site-header">
     <div class="site-header__inner">
       <a class="site-header__logo" href="index.html">Перекрёсток</a>
       <nav class="site-nav" aria-label="Основная навигация">
         <ul class="site-nav__list">
-          <li><a class="site-nav__link site-nav__link--active" href="index.html">Главная</a></li>
+          <li><a class="site-nav__link site-nav__link--active" href="index.html" aria-current="page">Главная</a></li>
           <li><a class="site-nav__link" href="catalog.html">Каталог</a></li>
           <li><a class="site-nav__link" href="product.html">Товар</a></li>
           <li><a class="site-nav__link" href="order.html">Заявка</a></li>
@@ -24,17 +26,24 @@
     </div>
   </header>
 
-  <main>
+  <main id="main">
     <section class="hero">
       <div class="hero__content">
         <h1 class="hero__title">Свежие продукты каждый день</h1>
         <p class="hero__text">Учебный интернет-магазин сети «Перекрёсток». Адаптивная вёрстка, доступность и подготовка к подключению JavaScript.</p>
         <a class="button button--primary" href="catalog.html">Перейти в каталог</a>
       </div>
-      <picture class="hero__media">
-        <source media="(min-width: 768px)" srcset="images/hero-desktop.svg">
-        <img src="images/hero-mobile.svg" alt="Логотип «Перекрёсток» и свежие продукты" width="600" height="400">
-      </picture>
+      <div class="hero__media">
+        <img
+          class="hero__image"
+          src="images/milk.jpg"
+          srcset="images/milk.jpg 800w"
+          sizes="(min-width: 900px) 50vw, 100vw"
+          alt=""
+          width="800" height="800"
+          fetchpriority="high"
+          decoding="async">
+      </div>
     </section>
 
     <section class="section">
@@ -46,28 +55,49 @@
       <h2 class="section__title">Популярные товары</h2>
       <div class="products-grid">
         <article class="product-card">
-          <img class="product-card__image" src="images/milk.jpg" alt="Молоко «Простоквашино» 3,2%" width="400" height="300" loading="lazy" decoding="async">
+          <img
+            class="product-card__image"
+            src="images/milk.jpg"
+            srcset="images/milk.jpg 800w"
+            sizes="(min-width: 900px) 380px, (min-width: 600px) 50vw, 100vw"
+            alt="Бутылка молока «Простоквашино» 3,2%"
+            width="400" height="300"
+            loading="lazy" decoding="async">
           <h3 class="product-card__title">Молоко «Простоквашино»</h3>
           <p class="product-card__description">3,2%, 1 л</p>
           <p class="product-card__price">89 ₽</p>
-          <a class="button button--primary product-card__button" href="product.html">Подробнее</a>
+          <a class="button button--primary product-card__button" href="product.html" aria-label="Подробнее о товаре Молоко «Простоквашино»">Подробнее</a>
         </article>
 
         <article class="product-card">
-          <img class="product-card__image" src="images/bread.png" alt="Хлеб «Бородинский»" width="400" height="300" loading="lazy" decoding="async">
+          <img
+            class="product-card__image"
+            src="images/bread.png"
+            srcset="images/bread.png 800w"
+            sizes="(min-width: 900px) 380px, (min-width: 600px) 50vw, 100vw"
+            alt="Буханка хлеба «Бородинский»"
+            width="400" height="300"
+            loading="lazy" decoding="async">
           <h3 class="product-card__title">Хлеб «Бородинский»</h3>
           <p class="product-card__description">400 г, нарезной</p>
           <p class="product-card__price">55 ₽</p>
-          <a class="button button--primary product-card__button" href="product.html">Подробнее</a>
+          <a class="button button--primary product-card__button" href="product.html" aria-label="Подробнее о товаре Хлеб «Бородинский»">Подробнее</a>
         </article>
 
         <article class="product-card">
           <span class="product-card__badge">Скидка</span>
-          <img class="product-card__image" src="images/apples.jpg" alt="Яблоки «Гренни Смит»" width="400" height="300" loading="lazy" decoding="async">
+          <img
+            class="product-card__image"
+            src="images/apples.jpg"
+            srcset="images/apples.jpg 800w"
+            sizes="(min-width: 900px) 380px, (min-width: 600px) 50vw, 100vw"
+            alt="Два яблока сорта «Гренни Смит»"
+            width="400" height="300"
+            loading="lazy" decoding="async">
           <h3 class="product-card__title">Яблоки «Гренни Смит»</h3>
           <p class="product-card__description">1 кг</p>
           <p class="product-card__price">149 ₽ <span class="product-card__price--old">189 ₽</span></p>
-          <a class="button button--primary product-card__button" href="product.html">Подробнее</a>
+          <a class="button button--primary product-card__button" href="product.html" aria-label="Подробнее о товаре Яблоки «Гренни Смит»">Подробнее</a>
         </article>
       </div>
     </section>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 480" width="1200" height="480" role="img" aria-label="Перекрёсток">
+  <rect width="1200" height="480" fill="#009B3A"/>
+  <circle cx="980" cy="240" r="180" fill="#00b347" opacity="0.55"/>
+  <circle cx="1080" cy="120" r="70" fill="#00c853" opacity="0.5"/>
+  <circle cx="860" cy="380" r="90" fill="#00a83e" opacity="0.6"/>
+  <text x="80" y="230" font-family="Arial, sans-serif" font-size="72" font-weight="800" fill="#ffffff">Перекрёсток</text>
+  <text x="80" y="295" font-family="Arial, sans-serif" font-size="30" fill="#d9f5e3">Свежие продукты каждый день</text>
+</svg>

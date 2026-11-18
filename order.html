@@ -9,6 +9,8 @@
   <script src="js/main.js" defer></script>
 </head>
 <body>
+  <a class="skip-link" href="#main">Перейти к содержимому</a>
+
   <header class="site-header">
     <div class="site-header__inner">
       <a class="site-header__logo" href="index.html">Перекрёсток</a>
@@ -17,43 +19,47 @@
           <li><a class="site-nav__link" href="index.html">Главная</a></li>
           <li><a class="site-nav__link" href="catalog.html">Каталог</a></li>
           <li><a class="site-nav__link" href="product.html">Товар</a></li>
-          <li><a class="site-nav__link site-nav__link--active" href="order.html">Заявка</a></li>
+          <li><a class="site-nav__link site-nav__link--active" href="order.html" aria-current="page">Заявка</a></li>
           <li><a class="site-nav__link" href="contacts.html">Контакты</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <main>
+  <main id="main">
     <nav class="breadcrumbs" aria-label="Хлебные крошки">
       <a class="breadcrumbs__link" href="index.html">Главная</a>
-      <span class="breadcrumbs__current">Заявка</span>
+      <span class="breadcrumbs__current" aria-current="page">Заявка</span>
     </nav>
 
     <section class="section">
       <h1 class="section__title">Оформление заявки</h1>
-      <p>Заполните форму — поля со звёздочкой обязательны. Форма адаптивна: на мобильных все поля растягиваются на всю ширину.</p>
+      <p>Заполните форму — поля со звёздочкой обязательны. На планшете и десктопе поля выстраиваются в две колонки.</p>
 
       <form class="order-form" action="#" method="post" novalidate>
-        <div class="order-form__field">
-          <label class="order-form__label" for="name">Имя *</label>
-          <input class="order-form__input" id="name" name="name" type="text" placeholder="Введите ваше имя" minlength="2" autocomplete="given-name" required>
+        <div class="order-form__row">
+          <div class="order-form__field">
+            <label class="order-form__label" for="name">Имя *</label>
+            <input class="order-form__input" id="name" name="name" type="text" placeholder="Введите ваше имя" minlength="2" autocomplete="given-name" required>
+          </div>
+
+          <div class="order-form__field">
+            <label class="order-form__label" for="email">E-mail *</label>
+            <input class="order-form__input" id="email" name="email" type="email" placeholder="example@mail.ru" autocomplete="email" required>
+          </div>
         </div>
 
-        <div class="order-form__field">
-          <label class="order-form__label" for="email">E-mail *</label>
-          <input class="order-form__input" id="email" name="email" type="email" placeholder="example@mail.ru" autocomplete="email" required>
-        </div>
+        <div class="order-form__row">
+          <div class="order-form__field">
+            <label class="order-form__label" for="phone">Телефон *</label>
+            <input class="order-form__input" id="phone" name="phone" type="tel" inputmode="tel" placeholder="+7 (900) 000-00-00" pattern="^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$" autocomplete="tel" aria-describedby="phone-hint" required>
+            <small class="order-form__hint" id="phone-hint">Формат: +7 (900) 000-00-00</small>
+          </div>
 
-        <div class="order-form__field">
-          <label class="order-form__label" for="phone">Телефон *</label>
-          <input class="order-form__input" id="phone" name="phone" type="tel" inputmode="tel" placeholder="+7 (900) 000-00-00" pattern="^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$" autocomplete="tel" required>
-          <small class="order-form__hint">Формат: +7 (900) 000-00-00</small>
-        </div>
-
-        <div class="order-form__field">
-          <label class="order-form__label" for="date">Дата связи</label>
-          <input class="order-form__input" id="date" name="date" type="date">
+          <div class="order-form__field">
+            <label class="order-form__label" for="date">Дата связи</label>
+            <input class="order-form__input" id="date" name="date" type="date">
+          </div>
         </div>
 
         <div class="order-form__field">

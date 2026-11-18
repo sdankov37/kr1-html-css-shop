@@ -9,13 +9,15 @@
   <script src="js/main.js" defer></script>
 </head>
 <body>
+  <a class="skip-link" href="#main">Перейти к содержимому</a>
+
   <header class="site-header">
     <div class="site-header__inner">
       <a class="site-header__logo" href="index.html">Перекрёсток</a>
       <nav class="site-nav" aria-label="Основная навигация">
         <ul class="site-nav__list">
           <li><a class="site-nav__link" href="index.html">Главная</a></li>
-          <li><a class="site-nav__link site-nav__link--active" href="catalog.html">Каталог</a></li>
+          <li><a class="site-nav__link site-nav__link--active" href="catalog.html" aria-current="page">Каталог</a></li>
           <li><a class="site-nav__link" href="product.html">Товар</a></li>
           <li><a class="site-nav__link" href="order.html">Заявка</a></li>
           <li><a class="site-nav__link" href="contacts.html">Контакты</a></li>
@@ -24,10 +26,10 @@
     </div>
   </header>
 
-  <main>
+  <main id="main">
     <nav class="breadcrumbs" aria-label="Хлебные крошки">
       <a class="breadcrumbs__link" href="index.html">Главная</a>
-      <span class="breadcrumbs__current">Каталог</span>
+      <span class="breadcrumbs__current" aria-current="page">Каталог</span>
     </nav>
 
     <section class="section">
@@ -36,7 +38,7 @@
     </section>
 
     <div class="catalog-layout">
-      <aside class="catalog-filters" aria-label="Фильтры каталога">
+      <aside class="catalog-filters">
         <h2 class="section__title">Фильтры</h2>
         <form class="filters-form" action="#" method="get">
           <fieldset class="filters-form__group">
@@ -50,10 +52,16 @@
 
           <fieldset class="filters-form__group">
             <legend class="filters-form__legend">Цена, ₽</legend>
-            <label class="filters-form__text-label" for="price-from">От</label>
-            <input class="filters-form__input" id="price-from" name="price-from" type="number" min="0" placeholder="0">
-            <label class="filters-form__text-label" for="price-to">До</label>
-            <input class="filters-form__input" id="price-to" name="price-to" type="number" min="0" placeholder="1000">
+            <div class="filters-form__row">
+              <div>
+                <label class="filters-form__text-label" for="price-from">От</label>
+                <input class="filters-form__input" id="price-from" name="price-from" type="number" min="0" placeholder="0">
+              </div>
+              <div>
+                <label class="filters-form__text-label" for="price-to">До</label>
+                <input class="filters-form__input" id="price-to" name="price-to" type="number" min="0" placeholder="1000">
+              </div>
+            </div>
           </fieldset>
 
           <button class="button button--primary button--block" type="submit">Применить</button>
@@ -63,52 +71,64 @@
       <section class="catalog-products" aria-label="Список товаров">
         <div class="products-grid">
           <article class="product-card">
-            <img class="product-card__image" src="images/milk.jpg" alt="Молоко «Простоквашино» 3,2%" width="400" height="300" loading="lazy" decoding="async">
+            <img class="product-card__image" src="images/milk.jpg" srcset="images/milk.jpg 800w"
+                 sizes="(min-width: 900px) 380px, (min-width: 600px) 50vw, 100vw"
+                 alt="Бутылка молока «Простоквашино» 3,2%" width="400" height="300" loading="lazy" decoding="async">
             <h3 class="product-card__title">Молоко «Простоквашино»</h3>
             <p class="product-card__description">3,2%, 1 л</p>
             <p class="product-card__price">89 ₽</p>
-            <a class="button button--primary product-card__button" href="product.html">Подробнее</a>
+            <a class="button button--primary product-card__button" href="product.html" aria-label="Подробнее о товаре Молоко «Простоквашино»">Подробнее</a>
           </article>
 
           <article class="product-card">
-            <img class="product-card__image" src="images/bread.png" alt="Хлеб «Бородинский»" width="400" height="300" loading="lazy" decoding="async">
+            <img class="product-card__image" src="images/bread.png" srcset="images/bread.png 800w"
+                 sizes="(min-width: 900px) 380px, (min-width: 600px) 50vw, 100vw"
+                 alt="Буханка хлеба «Бородинский»" width="400" height="300" loading="lazy" decoding="async">
             <h3 class="product-card__title">Хлеб «Бородинский»</h3>
             <p class="product-card__description">400 г, нарезной</p>
             <p class="product-card__price">55 ₽</p>
-            <a class="button button--primary product-card__button" href="product.html">Подробнее</a>
+            <a class="button button--primary product-card__button" href="product.html" aria-label="Подробнее о товаре Хлеб «Бородинский»">Подробнее</a>
           </article>
 
           <article class="product-card">
             <span class="product-card__badge">Скидка</span>
-            <img class="product-card__image" src="images/apples.jpg" alt="Яблоки «Гренни Смит»" width="400" height="300" loading="lazy" decoding="async">
+            <img class="product-card__image" src="images/apples.jpg" srcset="images/apples.jpg 800w"
+                 sizes="(min-width: 900px) 380px, (min-width: 600px) 50vw, 100vw"
+                 alt="Два яблока сорта «Гренни Смит»" width="400" height="300" loading="lazy" decoding="async">
             <h3 class="product-card__title">Яблоки «Гренни Смит»</h3>
             <p class="product-card__description">1 кг</p>
             <p class="product-card__price">149 ₽ <span class="product-card__price--old">189 ₽</span></p>
-            <a class="button button--primary product-card__button" href="product.html">Подробнее</a>
+            <a class="button button--primary product-card__button" href="product.html" aria-label="Подробнее о товаре Яблоки «Гренни Смит»">Подробнее</a>
           </article>
 
           <article class="product-card">
-            <img class="product-card__image" src="images/cheese.jpg" alt="Сыр «Российский»" width="400" height="300" loading="lazy" decoding="async">
+            <img class="product-card__image" src="images/cheese.jpg" srcset="images/cheese.jpg 800w"
+                 sizes="(min-width: 900px) 380px, (min-width: 600px) 50vw, 100vw"
+                 alt="Кусок сыра «Российский»" width="400" height="300" loading="lazy" decoding="async">
             <h3 class="product-card__title">Сыр «Российский»</h3>
             <p class="product-card__description">45%, 200 г</p>
             <p class="product-card__price">399 ₽</p>
-            <a class="button button--primary product-card__button" href="product.html">Подробнее</a>
+            <a class="button button--primary product-card__button" href="product.html" aria-label="Подробнее о товаре Сыр «Российский»">Подробнее</a>
           </article>
 
           <article class="product-card">
-            <img class="product-card__image" src="images/coffee.jpg" alt="Кофе «Jacobs Monarch»" width="400" height="300" loading="lazy" decoding="async">
+            <img class="product-card__image" src="images/coffee.jpg" srcset="images/coffee.jpg 800w"
+                 sizes="(min-width: 900px) 380px, (min-width: 600px) 50vw, 100vw"
+                 alt="Банка растворимого кофе «Jacobs Monarch»" width="400" height="300" loading="lazy" decoding="async">
             <h3 class="product-card__title">Кофе «Jacobs Monarch»</h3>
             <p class="product-card__description">Растворимый, 150 г</p>
             <p class="product-card__price">259 ₽</p>
-            <a class="button button--primary product-card__button" href="product.html">Подробнее</a>
+            <a class="button button--primary product-card__button" href="product.html" aria-label="Подробнее о товаре Кофе «Jacobs Monarch»">Подробнее</a>
           </article>
 
           <article class="product-card">
-            <img class="product-card__image" src="images/choko.jpg" alt="Шоколад «Алёнка»" width="400" height="300" loading="lazy" decoding="async">
+            <img class="product-card__image" src="images/choko.jpg" srcset="images/choko.jpg 800w"
+                 sizes="(min-width: 900px) 380px, (min-width: 600px) 50vw, 100vw"
+                 alt="Плитка молочного шоколада «Алёнка»" width="400" height="300" loading="lazy" decoding="async">
             <h3 class="product-card__title">Шоколад «Алёнка»</h3>
             <p class="product-card__description">Молочный, 100 г</p>
             <p class="product-card__price">99 ₽</p>
-            <a class="button button--primary product-card__button" href="product.html">Подробнее</a>
+            <a class="button button--primary product-card__button" href="product.html" aria-label="Подробнее о товаре Шоколад «Алёнка»">Подробнее</a>
           </article>
         </div>
       </section>
