@@ -211,6 +211,12 @@ a:hover { color: var(--color-primary-dark); }
   gap: var(--space-md);
 }
 
+.products-grid--catalog { grid-template-columns: 1fr; }
+
+@media (min-width: 600px) {
+  .products-grid--catalog { grid-template-columns: repeat(2, 1fr); }
+}
+
 /* ===== 9. Карточка товара ===== */
 .product-card {
   position: relative;
@@ -827,4 +833,10 @@ main.main--home {
   aspect-ratio: 4 / 3;
   object-fit: cover;
   border-radius: var(--radius-md);
+}
+
+/* Каталог: 2 карточки в ряд с 600px */
+.products-grid--catalog { grid-template-columns: 1fr; }
+@media (min-width: 600px) {
+  .products-grid--catalog { grid-template-columns: repeat(2, 1fr); }
 }
