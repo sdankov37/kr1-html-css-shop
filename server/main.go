@@ -1,20 +1,9 @@
 // ============================================================
 // Перекрёсток — backend на Go
-// Отдаёт статику из родительской папки + API корзины.
+// 12 товаров, сессионная корзина, каталог с фильтром.
 //
-// Скчать Go с оффициального сайта
-// Запуск:  cd server → go run .
-// Адрес:   http://localhost:8080
-//
-// API:
-//   GET    /api/products?categories=dairy,bakery&min_price=100&max_price=500
-//   GET    /api/cart              — товары в корзине текущей сессии
-//   POST   /api/cart              — { "product_id": 1, "quantity": 1 }
-//   DELETE /api/cart              — очистить корзину
-//   DELETE /api/cart/{id}         — удалить один товар
-//
-// Сессия — через cookie "session". Корзины хранятся in-memory
-// (для учебного проекта этого достаточно; при рестарте сервера данные пропадают).
+// Запуск:  cd server && go run .
+// Адрес:   http://localhost:8080/catalog.html
 // ============================================================
 
 package main
@@ -52,7 +41,6 @@ type CartItemFull struct {
 	Quantity  int     `json:"quantity"`
 }
 
-// Каталог товаров — синхронизирован с js/data.js и catalog.html
 var products = []Product{
 	{1, "Молоко «Простоквашино»", "dairy", 89, "milk.jpg", "3,2%, 1 л"},
 	{2, "Хлеб «Бородинский»", "bakery", 55, "bread.png", "400 г, нарезной"},
@@ -60,6 +48,12 @@ var products = []Product{
 	{4, "Сыр «Российский»", "dairy", 399, "cheese.jpg", "45%, 200 г"},
 	{5, "Кофе «Jacobs Monarch»", "drinks", 259, "coffee.jpg", "Растворимый, 150 г"},
 	{6, "Шоколад «Алёнка»", "sweets", 99, "choko.jpg", "Молочный, 100 г"},
+	{7, "Кефир «Простоквашино»", "dairy", 79, "kefir.jpg", "1%, 930 мл"},
+	{8, "Бананы", "fruits", 99, "banana.jpg", "1 кг"},
+	{9, "Сок «Добрый» апельсиновый", "drinks", 129, "juice.jpg", "1 л"},
+	{10, "Печенье «Юбилейное»", "sweets", 89, "cookies.jpg", "112 г"},
+	{11, "Сметана «Простоквашино»", "dairy", 119, "sour_cream.jpg", "20%, 300 г"},
+	{12, "Батон нарезной", "bakery", 45, "baguette.jpg", "400 г"},
 }
 
 type cartStore struct {
@@ -86,11 +80,8 @@ func sessionID(w http.ResponseWriter, r *http.Request) string {
 	_, _ = rand.Read(b)
 	id := hex.EncodeToString(b)
 	http.SetCookie(w, &http.Cookie{
-		Name:     "session",
-		Value:    id,
-		Path:     "/",
-		HttpOnly: true,
-		MaxAge:   60 * 60 * 24 * 7,
+		Name: "session", Value: id, Path: "/",
+		HttpOnly: true, MaxAge: 60 * 60 * 24 * 7,
 		SameSite: http.SameSiteLaxMode,
 	})
 	return id
@@ -156,11 +147,8 @@ func cartHandler(w http.ResponseWriter, r *http.Request) {
 		for _, it := range items {
 			if p, ok := findProduct(it.ProductID); ok {
 				full = append(full, CartItemFull{
-					ProductID: p.ID,
-					Title:     p.Title,
-					Price:     p.Price,
-					Image:     p.Image,
-					Quantity:  it.Quantity,
+					ProductID: p.ID, Title: p.Title,
+					Price: p.Price, Image: p.Image, Quantity: it.Quantity,
 				})
 			}
 		}
@@ -237,14 +225,11 @@ func cartItemHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
-	// Статика лежит на уровень выше — в корне проекта
-	staticFS := http.FileServer(http.Dir("../"))
-
 	mux := http.NewServeMux()
 	mux.HandleFunc("/api/products", productsHandler)
 	mux.HandleFunc("/api/cart", cartHandler)
 	mux.HandleFunc("/api/cart/", cartItemHandler)
-	mux.Handle("/", staticFS)
+	mux.Handle("/", http.FileServer(http.Dir("../")))
 
 	addr := ":8080"
 	log.Printf("Перекрёсток: http://localhost%s", addr)

@@ -115,11 +115,24 @@ if (messageElement) {
 }
 
 // ============================================================
-// Кнопка «Наверх» (осталась с работ №12–14)
+// Кнопка «Наверх» (появляется после прокрутки на 400px)
 // ============================================================
-document.querySelectorAll('.scroll-top').forEach((link) => {
+const scrollTopButtons = document.querySelectorAll('.scroll-top');
+
+function toggleScrollTopButtons() {
+  const isScrolled = window.scrollY > 400;
+  scrollTopButtons.forEach((btn) => {
+    btn.classList.toggle('scroll-top--visible', isScrolled);
+  });
+}
+
+window.addEventListener('scroll', toggleScrollTopButtons, { passive: true });
+toggleScrollTopButtons();
+
+scrollTopButtons.forEach((link) => {
   link.addEventListener('click', (event) => {
     event.preventDefault();
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 });
+

@@ -112,3 +112,6 @@
   .cart-total-row { font-size: 18px; }
   .cart-total-row strong { font-size: 20px; }
 }
+
+/* Атрибут hidden должен побеждать display: flex/grid */
+[hidden] { display: none !important; }
