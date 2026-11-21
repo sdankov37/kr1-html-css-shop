@@ -6,6 +6,7 @@
   <title>Каталог — Перекрёсток</title>
   <link rel="icon" type="image/jpg" href="images/perek_logo.jpg">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/shop.css">
 </head>
 <body id="top">
   <a href="#main" class="skip-link">Перейти к содержимому</a>
@@ -23,6 +24,7 @@
           <li><a href="catalog.html" class="site-nav__link site-nav__link--active">Каталог</a></li>
           <li><a href="about.html" class="site-nav__link">О магазине</a></li>
           <li><a href="contacts.html" class="site-nav__link">Контакты</a></li>
+          <li><a href="cart.html" class="site-nav__link">Корзина</a></li>
         </ul>
       </nav>
     </div>
@@ -40,7 +42,6 @@
     </section>
 
     <div class="catalog-layout">
-      <!-- Боковая панель фильтров -->
       <aside class="catalog-filters" aria-label="Фильтры каталога">
         <h2 class="visually-hidden">Фильтры</h2>
         <form class="filters-form" id="catalog-filters-form">
@@ -86,7 +87,6 @@
         </form>
       </aside>
 
-      <!-- Сетка товаров -->
       <div class="products-grid products-grid--catalog">
 
         <article class="product-card" data-category="dairy" data-price="89">
@@ -94,7 +94,10 @@
           <h3 class="product-card__title">Молоко «Простоквашино»</h3>
           <p class="product-card__description">3,2%, 1 л</p>
           <p class="product-card__price">89 ₽</p>
-          <a href="product-milk.html" class="button button--secondary product-card__button">Подробнее</a>
+          <div class="product-card__actions">
+            <a href="products/product-milk.html" class="button button--secondary product-card__button">Подробнее</a>
+            <button type="button" class="button button--primary product-card__button js-add-to-cart" data-product-id="1">В корзину</button>
+          </div>
         </article>
 
         <article class="product-card" data-category="bakery" data-price="55">
@@ -102,7 +105,10 @@
           <h3 class="product-card__title">Хлеб «Бородинский»</h3>
           <p class="product-card__description">400 г, нарезной</p>
           <p class="product-card__price">55 ₽</p>
-          <a href="product-bread.html" class="button button--secondary product-card__button">Подробнее</a>
+          <div class="product-card__actions">
+            <a href="products/product-bread.html" class="button button--secondary product-card__button">Подробнее</a>
+            <button type="button" class="button button--primary product-card__button js-add-to-cart" data-product-id="2">В корзину</button>
+          </div>
         </article>
 
         <article class="product-card" data-category="fruits" data-price="149">
@@ -111,7 +117,10 @@
           <h3 class="product-card__title">Яблоки «Гренни Смит»</h3>
           <p class="product-card__description">1 кг</p>
           <p class="product-card__price">149 ₽ <span class="product-card__price--old">189 ₽</span></p>
-          <a href="product-apples.html" class="button button--secondary product-card__button">Подробнее</a>
+          <div class="product-card__actions">
+            <a href="products/product-apples.html" class="button button--secondary product-card__button">Подробнее</a>
+            <button type="button" class="button button--primary product-card__button js-add-to-cart" data-product-id="3">В корзину</button>
+          </div>
         </article>
 
         <article class="product-card" data-category="dairy" data-price="399">
@@ -119,7 +128,10 @@
           <h3 class="product-card__title">Сыр «Российский»</h3>
           <p class="product-card__description">45%, 200 г</p>
           <p class="product-card__price">399 ₽</p>
-          <a href="product-cheese.html" class="button button--secondary product-card__button">Подробнее</a>
+          <div class="product-card__actions">
+            <a href="products/product-cheese.html" class="button button--secondary product-card__button">Подробнее</a>
+            <button type="button" class="button button--primary product-card__button js-add-to-cart" data-product-id="4">В корзину</button>
+          </div>
         </article>
 
         <article class="product-card" data-category="drinks" data-price="259">
@@ -127,7 +139,10 @@
           <h3 class="product-card__title">Кофе «Jacobs Monarch»</h3>
           <p class="product-card__description">Растворимый, 150 г</p>
           <p class="product-card__price">259 ₽</p>
-          <a href="product-coffee.html" class="button button--secondary product-card__button">Подробнее</a>
+          <div class="product-card__actions">
+            <a href="products/product-coffee.html" class="button button--secondary product-card__button">Подробнее</a>
+            <button type="button" class="button button--primary product-card__button js-add-to-cart" data-product-id="5">В корзину</button>
+          </div>
         </article>
 
         <article class="product-card" data-category="sweets" data-price="99">
@@ -135,10 +150,17 @@
           <h3 class="product-card__title">Шоколад «Алёнка»</h3>
           <p class="product-card__description">Молочный, 100 г</p>
           <p class="product-card__price">99 ₽</p>
-          <a href="product-choko.html" class="button button--secondary product-card__button">Подробнее</a>
+          <div class="product-card__actions">
+            <a href="products/product-choko.html" class="button button--secondary product-card__button">Подробнее</a>
+            <button type="button" class="button button--primary product-card__button js-add-to-cart" data-product-id="6">В корзину</button>
+          </div>
         </article>
       </div>
     </div>
+
+    <p id="catalog-no-results" class="catalog-no-results" hidden>
+      По выбранным фильтрам товаров не найдено.
+    </p>
   </main>
 
   <footer class="site-footer">
@@ -158,6 +180,7 @@
           <li><a href="index.html">Главная</a></li>
           <li><a href="catalog.html">Каталог</a></li>
           <li><a href="about.html">О магазине</a></li>
+          <li><a href="cart.html">Корзина</a></li>
         </ul>
       </div>
 
@@ -176,5 +199,6 @@
   <a href="#top" class="scroll-top" aria-label="Наверх">↑</a>
   <script src="js/data.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/catalog.js"></script>
 </body>
 </html>

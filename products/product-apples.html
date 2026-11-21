@@ -3,26 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Шоколад «Алёнка» — Перекрёсток</title>
-  <link rel="icon" type="image/jpg" href="perek_logo.jpg">
-  <link rel="stylesheet" href="css/style.css">
+  <title>Яблоки «Гренни Смит» — Перекрёсток</title>
+  <link rel="icon" type="image/jpg" href="../images/perek_logo.jpg">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/shop.css">
 </head>
 <body id="top">
   <a href="#main" class="skip-link">Перейти к содержимому</a>
 
   <header class="site-header">
     <div class="site-header__inner">
-      <a href="index.html" class="site-header__logo">
-        <img src="images/perek_logo.jpg" alt="Логотип Перекрёсток" class="logo-img" width="36" height="36">
+      <a href="../index.html" class="site-header__logo">
+        <img src="../images/perek_logo.jpg" alt="Логотип Перекрёсток" class="logo-img" width="36" height="36">
         <span>Перекрёсток</span>
       </a>
 
       <nav class="site-nav" aria-label="Основная навигация">
         <ul class="site-nav__list">
-          <li><a href="index.html" class="site-nav__link">Главная</a></li>
-          <li><a href="catalog.html" class="site-nav__link site-nav__link--active">Каталог</a></li>
-          <li><a href="about.html" class="site-nav__link">О магазине</a></li>
-          <li><a href="contacts.html" class="site-nav__link">Контакты</a></li>
+          <li><a href="../index.html" class="site-nav__link">Главная</a></li>
+          <li><a href="../catalog.html" class="site-nav__link site-nav__link--active">Каталог</a></li>
+          <li><a href="../about.html" class="site-nav__link">О магазине</a></li>
+          <li><a href="../contacts.html" class="site-nav__link">Контакты</a></li>
+          <li><a href="../cart.html" class="site-nav__link">Корзина</a></li>
         </ul>
       </nav>
     </div>
@@ -30,30 +32,33 @@
 
   <main id="main">
     <nav class="breadcrumbs" aria-label="Хлебные крошки">
-      <a href="index.html" class="breadcrumbs__link">Главная</a>
-      <span class="breadcrumbs__current"><a href="catalog.html" class="breadcrumbs__link">Каталог</a></span>
-      <span class="breadcrumbs__current">Шоколад «Алёнка»</span>
+      <a href="../index.html" class="breadcrumbs__link">Главная</a>
+      <span class="breadcrumbs__current"><a href="../catalog.html" class="breadcrumbs__link">Каталог</a></span>
+      <span class="breadcrumbs__current">Яблоки «Гренни Смит»</span>
     </nav>
 
     <div class="product-layout">
       <div class="product-gallery">
-        <img src="images/choko.jpg" alt="Плитка молочного шоколада «Алёнка», 100 г" class="product-gallery__main" width="600" height="600">
+        <img src="../images/apples.jpg" alt="Зелёные яблоки сорта «Гренни Смит»" class="product-gallery__main" width="600" height="600">
       </div>
 
       <div class="product-info">
-        <h1 class="product-info__title">Шоколад «Алёнка» молочный, 100 г</h1>
-        <p class="product-info__price">99 ₽</p>
+        <h1 class="product-info__title">Яблоки «Гренни Смит», 1 кг</h1>
+        <p class="product-info__price">149 ₽ <span class="product-card__price--old">189 ₽</span></p>
         <p class="product-info__description">
-          Легендарный молочный шоколад с нежным сливочно-карамельным вкусом, выпускаемый по классической рецептуре с 1966 года. Идеальное лакомство к чаю или кофе для детей и взрослых.
+          Сочные и хрустящие зелёные яблоки сорта «Гренни Смит» с освежающей кислинкой. Отлично подходят для здорового перекуса, приготовления свежевыжатых соков, фруктовых салатов и домашней выпечки.
         </p>
-        <a href="order.html" class="button button--primary">Оформить заявку</a>
+        <div class="product-info__actions">
+          <button type="button" class="button button--primary js-add-to-cart" data-product-id="3">Добавить в корзину</button>
+          <a href="../cart.html" class="button button--secondary">Перейти в корзину</a>
+        </div>
       </div>
 
       <aside class="product-aside" aria-label="Условия покупки">
         <h2 class="product-aside__title">Дополнительно</h2>
         <ul class="product-aside__list">
-          <li>Срок хранения: 12 месяцев в сухом прохладном месте</li>
-          <li>Доставка: курьером в день заказа или самовывоз</li>
+          <li>Акция недели: скидка 21% при заказе на сайте</li>
+          <li>Доставка: бережная упаковка без повреждений</li>
           <li>Оплата: банковской картой онлайн или при получении</li>
         </ul>
       </aside>
@@ -72,24 +77,24 @@
           </thead>
           <tbody>
             <tr>
-              <td>Производитель</td>
-              <td>Красный Октябрь</td>
+              <td>Сорт</td>
+              <td>Гренни Смит (Granny Smith)</td>
             </tr>
             <tr>
-              <td>Вид шоколада</td>
-              <td>Молочный</td>
+              <td>Вес</td>
+              <td>1 кг (в среднем 5–6 плодов)</td>
             </tr>
             <tr>
-              <td>Содержание какао</td>
-              <td>Не менее 25%</td>
+              <td>Вкус</td>
+              <td>Кисло-сладкий, освежающий</td>
             </tr>
             <tr>
-              <td>Вес нетто</td>
-              <td>100 г</td>
+              <td>Условия хранения</td>
+              <td>От +2 °C до +8 °C в сухом прохладном месте</td>
             </tr>
             <tr>
-              <td>Страна производства</td>
-              <td>Россия</td>
+              <td>Страна происхождения</td>
+              <td>Россия / Сербия</td>
             </tr>
           </tbody>
         </table>
@@ -101,34 +106,35 @@
       <div class="reviews-list">
         <article class="review">
           <div class="review__header">
-            <span class="review__author">Ольга С.</span>
+            <span class="review__author">Мария Т.</span>
             <span class="review__rating" aria-label="Оценка 5 из 5">★★★★★</span>
           </div>
-          <p class="review__text">Любимый шоколад с детства, тает во рту. Всегда свежий срок изготовления.</p>
+          <p class="review__text">Крепкие, хрустящие и без единого пятнышка. Очень люблю этот сорт за приятную кислинку, особенно по акционной цене.</p>
         </article>
 
         <article class="review">
           <div class="review__header">
-            <span class="review__author">Максим К.</span>
+            <span class="review__author">Олег Н.</span>
             <span class="review__rating" aria-label="Оценка 5 из 5">★★★★★</span>
           </div>
-          <p class="review__text">Классическая стограммовая плитка по отличной цене. Беру к чаю регулярно.</p>
+          <p class="review__text">Привезли крупные отборные яблоки. Идеально подошли для шарлотки и утренних смузи.</p>
         </article>
       </div>
     </section>
-        <section class="section">
+
+    <section class="section">
       <h2 class="section__title">Похожие товары</h2>
       <div class="products-grid">
         <article class="product-card">
-          <img src="images/milk.jpg" alt="Бутылка молока «Простоквашино» 3,2%" class="product-card__image">
+          <img src="../images/milk.jpg" alt="Бутылка молока «Простоквашино» 3,2%" class="product-card__image">
           <h3 class="product-card__title">Молоко «Простоквашино»</h3>
           <p class="product-card__description">3,2%, 1 л</p>
           <p class="product-card__price">89 ₽</p>
-          <a href="product.html" class="button button--secondary product-card__button">Подробнее</a>
+          <a href="product-milk.html" class="button button--secondary product-card__button">Подробнее</a>
         </article>
 
         <article class="product-card">
-          <img src="images/bread.png" alt="Буханка хлеба «Бородинский»" class="product-card__image">
+          <img src="../images/bread.png" alt="Буханка хлеба «Бородинский»" class="product-card__image">
           <h3 class="product-card__title">Хлеб «Бородинский»</h3>
           <p class="product-card__description">400 г, нарезной</p>
           <p class="product-card__price">55 ₽</p>
@@ -136,11 +142,11 @@
         </article>
 
         <article class="product-card">
-          <img src="images/choko.jpg" alt="Плитка молочного шоколада «Алёнка»" class="product-card__image">
+          <img src="../images/choko.jpg" alt="Плитка молочного шоколада «Алёнка»" class="product-card__image">
           <h3 class="product-card__title">Шоколад «Алёнка»</h3>
           <p class="product-card__description">Молочный, 100 г</p>
           <p class="product-card__price">99 ₽</p>
-          <a href="product-chocolate.html" class="button button--secondary product-card__button">Подробнее</a>
+          <a href="product-choko.html" class="button button--secondary product-card__button">Подробнее</a>
         </article>
       </div>
     </section>
@@ -150,8 +156,8 @@
     <div class="site-footer__inner">
       <div class="site-footer__col site-footer__brand">
         <p class="site-footer__slogan">Свежие продукты каждый день</p>
-        <a href="index.html" class="site-header__logo">
-          <img src="images/perek_logo.jpg" alt="Логотип Перекрёсток" class="logo-img" width="36" height="36">
+        <a href="../index.html" class="site-header__logo">
+          <img src="../images/perek_logo.jpg" alt="Логотип Перекрёсток" class="logo-img" width="36" height="36">
           <span>Перекрёсток</span>
         </a>
         <p class="site-footer__copy">© 2026 Магазин «Перекрёсток». Все права защищены.</p>
@@ -160,9 +166,9 @@
       <div class="site-footer__col">
         <h3 class="site-footer__heading">Навигация</h3>
         <ul class="site-footer__nav">
-          <li><a href="index.html">Главная</a></li>
-          <li><a href="catalog.html">Каталог</a></li>
-          <li><a href="about.html">О магазине</a></li>
+          <li><a href="../index.html">Главная</a></li>
+          <li><a href="../catalog.html">Каталог</a></li>
+          <li><a href="../about.html">О магазине</a></li>
         </ul>
       </div>
 
@@ -179,7 +185,8 @@
   </footer>
 
   <a href="#top" class="scroll-top" aria-label="Наверх">↑</a>
-  <script src="data.js"></script>
-  <script src="main.js"></script>
+  <script src="../js/data.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/catalog.js"></script>
 </body>
 </html>

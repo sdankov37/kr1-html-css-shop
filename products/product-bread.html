@@ -3,26 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Молоко «Простоквашино» — Перекрёсток</title>
-  <link rel="icon" type="image/jpg" href="perek_logo.jpg">
-  <link rel="stylesheet" href="css/style.css">
+  <title>Хлеб «Бородинский» — Перекрёсток</title>
+  <link rel="icon" type="image/jpg" href="../images/perek_logo.jpg">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/shop.css">
 </head>
 <body id="top">
   <a href="#main" class="skip-link">Перейти к содержимому</a>
 
   <header class="site-header">
     <div class="site-header__inner">
-      <a href="index.html" class="site-header__logo">
-        <img src="perek_logo.jpg" alt="Логотип Перекрёсток" class="logo-img" width="36" height="36">
+      <a href="../index.html" class="site-header__logo">
+        <img src="../images/perek_logo.jpg" alt="Логотип Перекрёсток" class="logo-img" width="36" height="36">
         <span>Перекрёсток</span>
       </a>
 
       <nav class="site-nav" aria-label="Основная навигация">
         <ul class="site-nav__list">
-          <li><a href="index.html" class="site-nav__link">Главная</a></li>
-          <li><a href="catalog.html" class="site-nav__link site-nav__link--active">Каталог</a></li>
-          <li><a href="about.html" class="site-nav__link">О магазине</a></li>
-          <li><a href="contacts.html" class="site-nav__link">Контакты</a></li>
+          <li><a href="../index.html" class="site-nav__link">Главная</a></li>
+          <li><a href="../catalog.html" class="site-nav__link site-nav__link--active">Каталог</a></li>
+          <li><a href="../about.html" class="site-nav__link">О магазине</a></li>
+          <li><a href="../contacts.html" class="site-nav__link">Контакты</a></li>
+          <li><a href="../cart.html" class="site-nav__link">Корзина</a></li>
         </ul>
       </nav>
     </div>
@@ -30,31 +32,32 @@
 
   <main id="main">
     <nav class="breadcrumbs" aria-label="Хлебные крошки">
-      <a href="index.html" class="breadcrumbs__link">Главная</a>
-      <span class="breadcrumbs__current"><a href="catalog.html" class="breadcrumbs__link">Каталог</a></span>
-      <span class="breadcrumbs__current">Молоко «Простоквашино»</span>
+      <a href="../index.html" class="breadcrumbs__link">Главная</a>
+      <span class="breadcrumbs__current"><a href="../catalog.html" class="breadcrumbs__link">Каталог</a></span>
+      <span class="breadcrumbs__current">Хлеб «Бородинский»</span>
     </nav>
-
-    <div class="js-message" role="status" aria-live="polite"></div>
 
     <div class="product-layout">
       <div class="product-gallery">
-        <img src="images/milk.jpg" alt="Бутылка молока «Простоквашино» 3,2% на светлом фоне" class="product-gallery__main" width="600" height="600">
+        <img src="../images/bread.png" alt="Буханка хлеба «Бородинский» 400 г" class="product-gallery__main" width="600" height="600">
       </div>
 
       <div class="product-info">
-        <h1 class="product-info__title">Молоко «Простоквашино» 3,2%, 1 л</h1>
-        <p class="product-info__price">89 ₽</p>
+        <h1 class="product-info__title">Хлеб «Бородинский» нарезной, 400 г</h1>
+        <p class="product-info__price">55 ₽</p>
         <p class="product-info__description">
-          Натуральное пастеризованное коровье молоко жирностью 3,2%. Изготовлено из отборного фермерского сырья без добавления сухого молока и консервантов. Подходит для всей семьи, приготовления каш, выпечки и добавления в кофе.
+          Классический заварной ржано-пшеничный хлеб с ароматным кориандром и солодом. Удобная ровная нарезка идеально подходит для бутербродов, закусок и подачи к первым блюдам.
         </p>
-        <a href="order.html" class="button button--primary">Оформить заявку</a>
+        <div class="product-info__actions">
+          <button type="button" class="button button--primary js-add-to-cart" data-product-id="2">Добавить в корзину</button>
+          <a href="../cart.html" class="button button--secondary">Перейти в корзину</a>
+        </div>
       </div>
 
       <aside class="product-aside" aria-label="Условия покупки">
         <h2 class="product-aside__title">Дополнительно</h2>
         <ul class="product-aside__list">
-          <li>Срок хранения: 7 суток при температуре от +2 °C до +6 °C</li>
+          <li>Срок хранения: 72 часа в герметичной упаковке</li>
           <li>Доставка: курьером в день заказа или самовывоз</li>
           <li>Оплата: банковской картой онлайн или при получении</li>
         </ul>
@@ -74,20 +77,20 @@
           </thead>
           <tbody>
             <tr>
-              <td>Производитель</td>
-              <td>Простоквашино</td>
+              <td>Тип хлеба</td>
+              <td>Ржано-пшеничный заварной</td>
             </tr>
             <tr>
-              <td>Жирность</td>
-              <td>3,2%</td>
+              <td>Вес нетто</td>
+              <td>400 г</td>
             </tr>
             <tr>
-              <td>Объём</td>
-              <td>1 л</td>
+              <td>Форма выпуска</td>
+              <td>Нарезной в пакете</td>
             </tr>
             <tr>
-              <td>Тип обработки</td>
-              <td>Пастеризованное</td>
+              <td>Особенности</td>
+              <td>С ржаным солодом и кориандром</td>
             </tr>
             <tr>
               <td>Страна производства</td>
@@ -103,18 +106,18 @@
       <div class="reviews-list">
         <article class="review">
           <div class="review__header">
-            <span class="review__author">Анна С.</span>
+            <span class="review__author">Елена К.</span>
             <span class="review__rating" aria-label="Оценка 5 из 5">★★★★★</span>
           </div>
-          <p class="review__text">Свежее и вкусное молоко с насыщенным сливочным вкусом. Беру каждую неделю для утреннего кофе и каш ребёнку.</p>
+          <p class="review__text">Очень мягкий и ароматный хлеб, чувствуется натуральный солод. Удобно, что уже нарезан ровными кусочками.</p>
         </article>
 
         <article class="review">
           <div class="review__header">
-            <span class="review__author">Иван П.</span>
-            <span class="review__rating" aria-label="Оценка 4 из 5">★★★★☆</span>
+            <span class="review__author">Дмитрий В.</span>
+            <span class="review__rating" aria-label="Оценка 5 из 5">★★★★★</span>
           </div>
-          <p class="review__text">Хорошее соотношение цены и качества, удобная бутылка с плотной крышкой. Всегда привозят с хорошим запасом по сроку годности.</p>
+          <p class="review__text">Всегда свежий привоз, к борщу подходит идеально. Долго не черствеет в упаковке.</p>
         </article>
       </div>
     </section>
@@ -123,15 +126,15 @@
       <h2 class="section__title">Похожие товары</h2>
       <div class="products-grid">
         <article class="product-card">
-          <img src="images/bread.png" alt="Буханка хлеба «Бородинский»" class="product-card__image">
-          <h3 class="product-card__title">Хлеб «Бородинский»</h3>
-          <p class="product-card__description">400 г, нарезной</p>
-          <p class="product-card__price">55 ₽</p>
-          <a href="product-bread.html" class="button button--secondary product-card__button">Подробнее</a>
+          <img src="../images/milk.jpg" alt="Бутылка молока «Простоквашино» 3,2%" class="product-card__image">
+          <h3 class="product-card__title">Молоко «Простоквашино»</h3>
+          <p class="product-card__description">3,2%, 1 л</p>
+          <p class="product-card__price">89 ₽</p>
+          <a href="product-milk.html" class="button button--secondary product-card__button">Подробнее</a>
         </article>
 
         <article class="product-card">
-          <img src="images/cheese.jpg" alt="Кусок сыра «Российский»" class="product-card__image">
+          <img src="../images/cheese.jpg" alt="Кусок сыра «Российский»" class="product-card__image">
           <h3 class="product-card__title">Сыр «Российский»</h3>
           <p class="product-card__description">45%, 200 г</p>
           <p class="product-card__price">399 ₽</p>
@@ -140,7 +143,7 @@
 
         <article class="product-card">
           <span class="product-card__badge">Скидка</span>
-          <img src="images/apples.jpg" alt="Два яблока сорта «Гренни Смит»" class="product-card__image">
+          <img src="../images/apples.jpg" alt="Два яблока сорта «Гренни Смит»" class="product-card__image">
           <h3 class="product-card__title">Яблоки «Гренни Смит»</h3>
           <p class="product-card__description">1 кг</p>
           <p class="product-card__price">149 ₽ <span class="product-card__price--old">189 ₽</span></p>
@@ -154,8 +157,8 @@
     <div class="site-footer__inner">
       <div class="site-footer__col site-footer__brand">
         <p class="site-footer__slogan">Свежие продукты каждый день</p>
-        <a href="index.html" class="site-header__logo">
-          <img src="perek_logo.jpg" alt="Логотип Перекрёсток" class="logo-img" width="36" height="36">
+        <a href="../index.html" class="site-header__logo">
+          <img src="../images/perek_logo.jpg" alt="Логотип Перекрёсток" class="logo-img" width="36" height="36">
           <span>Перекрёсток</span>
         </a>
         <p class="site-footer__copy">© 2026 Магазин «Перекрёсток». Все права защищены.</p>
@@ -164,9 +167,9 @@
       <div class="site-footer__col">
         <h3 class="site-footer__heading">Навигация</h3>
         <ul class="site-footer__nav">
-          <li><a href="index.html">Главная</a></li>
-          <li><a href="catalog.html">Каталог</a></li>
-          <li><a href="about.html">О магазине</a></li>
+          <li><a href="../index.html">Главная</a></li>
+          <li><a href="../catalog.html">Каталог</a></li>
+          <li><a href="../about.html">О магазине</a></li>
         </ul>
       </div>
 
@@ -183,7 +186,8 @@
   </footer>
 
   <a href="#top" class="scroll-top" aria-label="Наверх">↑</a>
-  <script src="data.js"></script>
-  <script src="main.js"></script>
+  <script src="../js/data.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/catalog.js"></script>
 </body>
 </html>
